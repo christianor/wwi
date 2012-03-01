@@ -45,6 +45,9 @@
                                     <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu">
+                                    #{secure.check 'admin'}
+                                        <li><a href="/admin/">Administration</a></li>
+                                    #{/secure.check}
                                     <li><a href="/logout">Logout</a></li>
                                 </ul>
                                 #{/if}

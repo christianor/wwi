@@ -2,8 +2,10 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
+GET     /admin                                                               module:crud
+
 # Home page
-POST     /series/my/track/episode/{seriesId}/{seasonNumber}/{episodeNumber}/{authenticityToken}     Series.trackEpisode
+POST    /series/my/track/episode/{seriesId}/{seasonNumber}/{episodeNumber}/{authenticityToken}     Series.trackEpisode
 POST    /series/my/add/{seriesId}/{authenticityToken}                                               Series.addToMySeries
 
 GET     /series/all.html                                                            Series.allSeries
