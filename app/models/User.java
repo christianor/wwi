@@ -16,7 +16,7 @@ import play.db.jpa.Model;
  * @author Christian
  */
 @Entity
-@Table(appliesTo="`User`")
+@Table(appliesTo="\"User\"")
 public class User extends Model {
     @Unique
     public String username;
