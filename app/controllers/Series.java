@@ -9,7 +9,7 @@ import flexjson.JSONSerializer;
 import java.util.ArrayList;
 import java.util.List;
 import models.Episode;
-import models.User;
+import models.BetaUser;
 import play.db.jpa.JPA;
 import play.mvc.Controller;
 import play.mvc.With;
@@ -22,13 +22,13 @@ import play.mvc.With;
 public class Series extends Controller {
 
     public static void userSeries() {
-        User user = User.findById(Long.parseLong(session.get("userid")));
+        BetaUser user = BetaUser.findById(Long.parseLong(session.get("userid")));
         render(user);
     }
 
     public static void allSeries() {
 
-        List<Object[]> results = JPA.em().createNativeQuery("SELECT serviceSeriesId, COUNT(*) AS anz FROM User_Series, Series WHERE Series.id = User_Series.series_id GROUP BY serviceSeriesId ORDER BY anz desc LIMIT 0,9").getResultList();
+        List<Object[]> results = JPA.em().createNativeQuery("SELECT serviceSeriesId, COUNT(*) AS anz FROM BetaUser_Series, Series WHERE Series.id = BetaUser_Series.series_id GROUP BY serviceSeriesId ORDER BY anz desc LIMIT 0,9").getResultList();
         List<String> ids = new ArrayList<String>();
 
         for (Object[] val : results) {
@@ -45,15 +45,15 @@ public class Series extends Controller {
         } else {
             // Long.parseLong(session.get("userid")), serviceSeriesId 
             List<Episode> episodes = JPA.em().createNativeQuery("SELECT Episode.id, Episode.episodeNumber, Episode.seasonNumber, Series.id AS series_id FROM "
-                    + "User, Series, Episode, User_Series, User_Episode "
+                    + "BetaUser, Series, Episode, User_Series, User_Episode "
                     + "WHERE "
                     + "User.id = :userid "
                     + "and Series.serviceSeriesId = :serviceseriesid "
                     + "and Episode.series_id = Series.id "
-                    + "and User_Series.users_id = User.id "
-                    + "and User_Series.series_id = Series.id "
-                    + "and User_Episode.users_id = User.id "
-                    + "and User_Episode.episodes_id = Episode.id", Episode.class).setParameter("userid", Long.parseLong(session.get("userid"))).setParameter("serviceseriesid", serviceSeriesId).getResultList();
+                    + "and BetaUser_Series.users_id = BetaUser.id "
+                    + "and BetaUser_Series.series_id = Series.id "
+                    + "and BetaUser_Episode.users_id = BetaUser.id "
+                    + "and BetaUser_Episode.episodes_id = Episode.id", Episode.class).setParameter("userid", Long.parseLong(session.get("userid"))).setParameter("serviceseriesid", serviceSeriesId).getResultList();
 
             JSONSerializer flex = new JSONSerializer().include(
                     "episodeNumber",
@@ -72,7 +72,7 @@ public class Series extends Controller {
 
     public static void trackEpisode(String seriesId, int seasonNumber, int episodeNumber, String authenticityToken) {
         checkAuthenticity();
-        User user = User.find("id", Long.parseLong(session.get("userid"))).first();
+        BetaUser user = BetaUser.find("id", Long.parseLong(session.get("userid"))).first();
         String json = "{}";
 
         if (user != null) {
@@ -98,11 +98,11 @@ public class Series extends Controller {
 
             if (user.episodes.contains(episode)) {
                 user.episodes.remove(episode);
-                JPA.em().createNativeQuery("DELETE FROM User_Episode WHERE users_id = ? AND episodes_id = ?").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+                JPA.em().createNativeQuery("DELETE FROM BetaUser_Episode WHERE users_id = ? AND episodes_id = ?").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
                 json = "{ \"response\": \"removed\"}";
 
             } else {
-                JPA.em().createNativeQuery("INSERT INTO User_Episode (users_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+                JPA.em().createNativeQuery("INSERT INTO BetaUser_Episode (users_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
                 json = "{ \"response\": \"added\"}";
             }
 
@@ -139,7 +139,7 @@ public class Series extends Controller {
         }
         
         checkAuthenticity();
-        models.User u = models.User.findById(Long.parseLong(session.get("userid")));
+        models.BetaUser u = models.BetaUser.findById(Long.parseLong(session.get("userid")));
         
         if (u.series.contains(s))
         {

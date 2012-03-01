@@ -21,5 +21,5 @@ public class Episode extends Model {
     @ManyToOne
     public Series series;
     @ManyToMany(mappedBy="episodes")
-    public List<User> users;
+    public List<BetaUser> users;
 }

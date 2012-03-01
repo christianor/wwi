@@ -1,7 +1,7 @@
-User(admin):
+BetaUser(admin):
   username: admin
   password: gavina98
   
-User(test):
+BetaUser(test):
   username: test
   password: test

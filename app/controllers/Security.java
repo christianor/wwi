@@ -1,12 +1,12 @@
 package controllers;
 
-import models.User;
+import models.BetaUser;
 import play.mvc.Scope.Session;
 
 public class Security extends Secure.Security {
 
     static boolean authenticate(String username, String password) {
-        User user = User.find("username", username).first();
+        BetaUser user = BetaUser.find("username", username).first();
         
         if (user != null && user.password.equals(password))
             Session.current().put("userid", user.id);

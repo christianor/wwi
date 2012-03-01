@@ -18,7 +18,7 @@ import play.db.jpa.Model;
 public class Series extends Model {
     public String serviceSeriesId;
     @ManyToMany(mappedBy="series")
-    public List<User> users;
+    public List<BetaUser> users;
     @OneToMany(mappedBy="series")
     public List<Episode> episodes;
     public String name;
