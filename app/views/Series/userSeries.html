@@ -1,0 +1,59 @@
+#{extends 'main.html' /}
+#{set nav:'myseries' /}
+
+<h1>Your Series</h1>
+<hr class="soften"/>
+#{if user.series }
+<div class="alert alert-info" id="loadingMessage">
+    <i class="icon-eye-open"></i> <strong>&nbsp;&nbsp;Hold on please. Looking up series data...</strong>  
+</div>
+<table id="serieslist" class="table table-striped table-bordered table-condensed" style="display:none">
+    <thead><tr><th style="min-width: 80px">Name</th><th>Description</th></tr></thead>
+    <tbody>
+        #{list items:user.series, as:'series'}
+        <tr class="seriesrow" id="${series.serviceSeriesId}"><td style="vertical-align:middle"></td><td></td></tr>
+        #{/list}
+    </tbody>
+</table>
+
+<script>
+    $(function()
+    {
+        getSeries();
+    });
+    
+    function getSeries()
+    {
+        var count = $("#serieslist tr.seriesrow").length;
+        var compareCounter = 0;
+        
+        $("#serieslist tr.seriesrow").each(function() {
+        
+            var row = $(this);
+            $.get("http://series-ortiz.rhcloud.com/series/" + row.attr("id") + "/info?s=thetvdb",
+            function(series){
+                row.children(":first").html('<a href="/series/my/' + row.attr("id") + '.html">' + series.name + '</a>');
+                row.children(":nth-child(2)").text(series.description);
+                
+                compareCounter++;
+            
+                if (count == compareCounter)
+                {
+                    $("#loadingMessage").fadeOut("fast", function() {$("#serieslist").toggle("fast");} );
+                    
+                    
+                }
+            }, "jsonp");
+        });
+        
+    }
+</script>
+#{/if }
+#{else }
+<h2 class="alert alert-info">
+    You have added no series at the moment. <br/>
+    Go to <i>TV-series</i> and add the series that you want to take track of.
+</h2>
+#{/else }
+
+

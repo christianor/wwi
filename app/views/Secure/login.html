@@ -1,0 +1,49 @@
+#{extends 'main.html' /}
+
+<h3 class="alert alert-warning">
+    Currently in closed beta. You will soon be able to register.
+</h3>
+<div class="form-horizontal">
+    #{form @authenticate()}
+    <fieldset>
+        <legend>Login</legend>
+
+        <div class="control-group">
+            <label class="control-label" for="username">Username</label>
+            <div class="controls">
+                <input type="text" name="username" id="username" value="${flash.username}" /> 
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+                <input type="password" name="password" id="password" value="" />
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <label class="checkbox">
+                    <input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} />
+                           <label for="remember">&{'secure.remember'}</label>
+                </label>
+            </div>
+        </div>
+        #{if flash.error}
+        <p class="alert alert-danger">
+            &{flash.error}
+        </p>
+        #{/if}
+        #{if flash.success}
+        <p class="alert alert-success">
+            &{flash.success}
+        </p>
+        #{/if}
+        <div class="form-actions">
+            <input type="submit" class="btn-primary btn" id="signin" value="Signin"/>
+        </div>
+
+    </fieldset>
+    #{/form}
+
+</div>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Where Was I - A Simple Little Question</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Christian Ortiz">
+        <link href="@{'/public/css/main.css'}" rel="stylesheet">
+        <link href="@{'/public/css/bootstrap.css'}" rel="stylesheet">
+        <link href="@{'/public/css/bootstrap-responsive.min.css'}" rel="stylesheet">
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="@{'/public/js/bootstrap.js'}"></script>
+    </head>
+
+    <body>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/">
+                        <i class="icon-facetime-video icon-white"></i> Where Was I
+                    </a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li %{ if (get('nav') == 'tvseries') out.print('class="active"') /}%><a href="@{Series.allSeries}">TV-Series</a></li>
+                            <li %{ if (get('nav') == 'myseries') out.print('class="active"') /}% ><a href="@{Series.userSeries}">My Series</a></li>
+                            <li class="divider-vertical"></li>
+                            #{if session.username}
+                            <li class="dropdown">
+                                <a href="#"
+                                   class="dropdown-toggle"
+                                   data-toggle="dropdown">
+                                    ${session.username}
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/logout">Logout</a></li>
+                                </ul>
+                                #{/if}
+                                #{else}
+                            <li><a href="/login">Login</a></li>   
+                            #{/else}
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="main-container">
+                #{doLayout /}
+            </div>
+
+            <div class="footer" style="padding-top:15px;margin-bottom:15px;border-top: 1px solid #E5E5E5">
+            </div>
+        </div>
+    </body>
+</html>

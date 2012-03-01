@@ -1,0 +1,95 @@
+#{extends 'main.html' /}
+#{set nav:'tvseries' /}
+<h1>Search for Tv-Series</h1>
+<div class="well form-search">
+    <input class="search-query" id="search-field" type="text"/> <a class="btn btn-primary" id="search-btn" href="#">Search <i class="icon-white icon-search"></i></a>
+</div>
+<div id="search-result">
+
+</div>
+<hr class="soften"/>
+<h1>Popular Series</h1>
+
+<div class="alert alert-info" style="margin-top:10px" id="loadingMessage">
+    <i class="icon-eye-open"></i> <strong>&nbsp;&nbsp;Hold on please. Looking up popular series...  </strong>
+</div>
+<div class="row" style="margin-top:10px">
+
+    <div class="popseries span4"></div>
+    <div class="popseries span4"></div>
+    <div class="popseries span4"></div>
+</div>
+<div class="row">
+    <div class="popseries span4"></div>
+    <div class="popseries span4"></div>
+    <div class="popseries span4"></div>
+</div>
+<div class="row">
+    <div class="popseries span4"></div>
+    <div class="popseries span4"></div>
+    <div class="popseries span4"></div>
+</div>
+
+<script type="text/javascript">
+    var popseriesIds = ${ids.raw()};
+    var iExt = 0;
+    
+    for (var i = 0; i < popseriesIds.length; i++) 
+    {
+        $.get("http://series-ortiz.rhcloud.com/series/" + popseriesIds[i] + "/info?s=thetvdb",
+        function(series){
+            $($(".popseries")[iExt]).html("<h2>"+series.name+"</h2>" + (series.description == null ? "Currently no description available." : series.description));
+
+            
+            if (iExt == popseriesIds.length - 1)
+                $("#loadingMessage").fadeOut("fast");
+            iExt++;
+           
+        }, "jsonp");
+        
+    }
+    
+    $("#search-btn").click(function()
+    {
+        
+        if ($("#search-field").val() != "") 
+        {
+            $("#search-result").fadeOut("fast");
+            $.get("http://series-ortiz.rhcloud.com/series?name=" + $("#search-field").val() + "&s=thetvdb",
+            function(series){
+           
+                $("#search-result").html("");
+            
+                for (var i = 0; i < series.length; i++)
+                {
+                    $("#search-result").append('<div class="alert alert-success"><h3>' + series[i].name + '</h3>' + (series[i].description != null ? series[i].description : "")  + '<div><a href="#" id="' + series[i].id + '" class="btn add-series"><i class="icon-plus"></i> Add To <i>My Series</i></a></div></div>');
+                }
+            
+                $("#search-result").fadeIn();
+            
+            }, "jsonp");     
+        }
+    
+        return false;
+    });
+
+    $(".add-series").live('click', function()
+    {
+        var id = $(this).attr('id');
+        var btn = $(this);
+        $.post("/series/my/add/"+id+"/${session.getAuthenticityToken()}",
+        function(result){
+            if (result.response == "nothing")
+            {
+                btn.fadeOut("fast");
+                alert("Already available in \"My Series\"");
+            }
+            else if (result.response == "added")
+            {
+                btn.fadeOut("fast");
+            }
+            
+        });
+        return false;
+    });
+</script>
