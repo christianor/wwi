@@ -7,7 +7,6 @@ package models;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import org.hibernate.annotations.Table;
 import play.data.validation.Unique;
 import play.db.jpa.Model;
 
