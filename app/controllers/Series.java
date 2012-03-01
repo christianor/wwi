@@ -28,7 +28,7 @@ public class Series extends Controller {
 
     public static void allSeries() {
 
-        List<Object[]> results = JPA.em().createNativeQuery("SELECT serviceSeriesId, COUNT(*) AS anz FROM BetaUser_Series, Series WHERE Series.id = BetaUser_Series.series_id GROUP BY serviceSeriesId ORDER BY anz desc LIMIT 0,9").getResultList();
+        List<Object[]> results = JPA.em().createNativeQuery("SELECT serviceSeriesId, COUNT(*) AS anz FROM BetaUser_Series, Series WHERE Series.id = BetaUser_Series.series_id GROUP BY serviceSeriesId ORDER BY anz desc").setMaxResults(9).getResultList();
         List<String> ids = new ArrayList<String>();
 
         for (Object[] val : results) {
