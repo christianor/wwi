@@ -24,4 +24,10 @@ public class User extends Model {
     @ManyToMany
     public List<Episode> episodes;
     
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+            
+    
 }
