@@ -1,3 +1,7 @@
 User(admin):
   username: admin
   password: gavina98
+  
+User(test):
+  username: test
+  password: test
