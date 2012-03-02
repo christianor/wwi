@@ -117,6 +117,7 @@ public class Series extends Controller {
     
     public static void addToMySeries(String seriesId, String authenticityToken)
     {
+        checkAuthenticity();
         models.Series s = models.Series.find("serviceSeriesId", seriesId).first();
         if (s == null)
         {
@@ -138,7 +139,7 @@ public class Series extends Controller {
             s.save();
         }
         
-        checkAuthenticity();
+        
         models.BetaUser u = models.BetaUser.findById(Long.parseLong(session.get("userid")));
         
         if (u.series.contains(s))
