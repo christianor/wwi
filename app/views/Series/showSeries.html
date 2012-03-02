@@ -22,10 +22,11 @@
 <script>
 
     var seenEpisodes = ${json.raw()};
+    seriesId = "${serviceSeriesId}";
     
     $(function()
     {
-        $.get("http://series-ortiz.rhcloud.com/series/${serviceSeriesId}?s=thetvdb",
+        $.get("http://series-ortiz.rhcloud.com/series/" + seriesId + "?s=thetvdb",
         function(series){
             $("#loadingMessage").fadeOut("fast", function()
             {
@@ -41,7 +42,12 @@
                     
                     $("#seasontabs .tab-content").append('<div class="tab-pane" id="' + 
                         number + '"><h3>Episodes: ' + series.seasons[i].episodes.length + 
-                        '</h3><div class="episodes"></div></div>');   
+                        '</h3>' +
+                        '<div class="btn-group" style="margin-top:10px;margin-bottom:10px">' +
+                        '<button class="btn btn-seen-season"><i class="icon-eye-open"></i> I`ve seen this season</button>' +
+                        '<button href="#" class="btn btn-notseen-season">I`ve not seen this season <i class="icon-eye-close"></i></button>' +
+                        '</div>' +
+                        '<div class="episodes"></div></div>');   
                     
                     $("#seasontabs .tab-content .tab-pane[id=" + number + "] .episodes").append("<table class='table table-striped table-bordered table-condensed'><thead><tr><th></th><th>No</th><th style='min-width:100px;'>Name</th><th>Description</th></tr></thead><tbody></tbody></table>");
                     
@@ -58,10 +64,10 @@
                         }
                         
                         if (seen == true) {
-                            $("#seasontabs .tab-content .tab-pane[id=" + number + "] .episodes table tbody").append('<tr><td style="vertical-align: middle;"><a class="btn-track btn btn-danger" data-loading-text="..." id="${ serviceSeriesId };' + number + ';' + episode.number + '" href="#"><i class="icon-eye-close icon-white"></i></a></td><td>' + episode.number + '</td><td>' + (episode.name == null ? "Currently no name available." : episode.name) + '</td><td>' + (episode.description == null ? "Currently no description available." : episode.description) + '</td></tr>');
+                            $("#seasontabs .tab-content .tab-pane[id=" + number + "] .episodes table tbody").append('<tr><td style="vertical-align: middle;"><a class="btn-track btn btn-success" data-loading-text="..." id="${ serviceSeriesId };' + number + ';' + episode.number + '" href="#"><i class="icon-eye-open icon-white"></i></a></td><td>' + episode.number + '</td><td>' + (episode.name == null ? "Currently no name available." : episode.name) + '</td><td>' + (episode.description == null ? "Currently no description available." : episode.description) + '</td></tr>');
                         }
                         else
-                            $("#seasontabs .tab-content .tab-pane[id=" + number + "] .episodes table tbody").append('<tr><td style="vertical-align: middle;"><a class="btn-track btn btn-success" data-loading-text="..." id="${ serviceSeriesId };' + number + ';' + episode.number + '" href="#"><i class="icon-eye-open icon-white"></i></a></td><td>' + episode.number + '</td><td>' + (episode.name == null ? "Currently no name available." : episode.name) + '</td><td>' + (episode.description == null ? "Currently no description available." : episode.description) + '</td></tr>');
+                            $("#seasontabs .tab-content .tab-pane[id=" + number + "] .episodes table tbody").append('<tr><td style="vertical-align: middle;"><a class="btn-track btn btn-danger" data-loading-text="..." id="${ serviceSeriesId };' + number + ';' + episode.number + '" href="#"><i class="icon-eye-close icon-white"></i></a></td><td>' + episode.number + '</td><td>' + (episode.name == null ? "Currently no name available." : episode.name) + '</td><td>' + (episode.description == null ? "Currently no description available." : episode.description) + '</td></tr>');
                     }
 
                 }
@@ -88,19 +94,30 @@
                 button.button('reset');
                 if (result.response == "removed")
                 {
-                    button.removeClass('btn-danger');
-                    button.addClass('btn-success');
-                    button.html('<i class="icon-white icon-eye-open"></i>');  
+                    button.removeClass('btn-success');
+                    button.addClass('btn-danger');
+                    button.html('<i class="icon-white icon-eye-close"></i>');  
                 }
                 else if (result.response == "added")
                 {
-                    button.removeClass('btn-success');
-                    button.addClass('btn-danger');
-                    button.html('<i class="icon-white icon-eye-close"></i>');     
+                    button.removeClass('btn-danger');
+                    button.addClass('btn-success');
+                    button.html('<i class="icon-white icon-eye-open"></i>');     
                 }
             });
             
             return false;
+        });
+        
+        $(".btn-seen-season").live("click", function()
+        {
+            $(this).parent().parent().find('a[class="btn-track btn btn-danger"]').click();
+  
+        });
+        
+        $(".btn-notseen-season").live("click", function()
+        {
+            $(this).parent().parent().find('a[class="btn-track btn btn-success"]').click();
         });
     });     
 </script>
