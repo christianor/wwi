@@ -1,25 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/controllers/Application.java</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/controllers/Series.java</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/controllers/Security.java</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/conf/application.conf</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/views/Series/showSeries.html</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/views/Series/allSeries.html</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/views/Series/userSeries.html</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/views/Secure/login.html</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/models/BetaUser.java</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/conf/routes</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/models/Series.java</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/helpers/UrlHelper.java</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/jsonMappings/Series.java</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/conf/dependencies.yml</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/modules/secure</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/jobs/Bootstrap.java</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/conf/initial-data.yml</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/models/Episode.java</file>
-        <file>file:/Users/Christian/Dropbox/Repositories/wherewasi/app/controllers/User.java</file>
-    </open-files>
 </project-private>

@@ -5,12 +5,9 @@
 package controllers;
 import play.mvc.With;
 
-/**
- *
- * @author Christian
- */
 @Check("admin")
 @With(Secure.class)
-public class Episodes extends CRUD {
+@CRUD.For(models.Series.class)
+public class SeriesCRUD extends CRUD {
     
 }

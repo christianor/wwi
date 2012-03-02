@@ -34,7 +34,7 @@ public class Series extends Controller {
         for (Object[] val : results) {
             ids.add(val[0].toString());
         }
-
+        
         render(ids);
     }
 

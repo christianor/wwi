@@ -3,10 +3,14 @@
  * and open the template in the editor.
  */
 package controllers;
-import play.mvc.With;
-
+import play.mvc.*;
+/**
+ *
+ * @author Christian
+ */
 @Check("admin")
 @With(Secure.class)
-public class Seriess extends CRUD {
-    
+@CRUD.For(models.BetaUser.class)
+public class BetaUsersCRUD extends CRUD {
+
 }
