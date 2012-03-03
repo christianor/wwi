@@ -22,7 +22,7 @@ import play.mvc.With;
 public class Series extends Controller {
 
     public static void userSeries() {
-        BetaUser user = BetaUser.findById(Long.parseLong(session.get("userid")));
+        BetaUser user = BetaUser.find("name", Security.connected()).first();
         render(user);
     }
 
@@ -140,7 +140,7 @@ public class Series extends Controller {
         }
         
         
-        models.BetaUser u = models.BetaUser.findById(Long.parseLong(session.get("userid")));
+        models.BetaUser u = BetaUser.find("name", Security.connected()).first();
         
         if (u.series.contains(s))
         {
