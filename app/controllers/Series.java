@@ -22,7 +22,7 @@ import play.mvc.With;
 public class Series extends Controller {
 
     public static void userSeries() {
-        BetaUser user = BetaUser.find("name", Security.connected()).first();
+        BetaUser user = BetaUser.findById(Long.parseLong(session.get("userid")));
         render(user);
     }
 
@@ -72,7 +72,7 @@ public class Series extends Controller {
 
     public static void trackEpisode(String seriesId, int seasonNumber, int episodeNumber, String authenticityToken) {
         checkAuthenticity();
-        BetaUser user = BetaUser.find("id", Long.parseLong(session.get("userid"))).first();
+        BetaUser user = BetaUser.findById(Long.parseLong(session.get("userid")));
         String json = "{}";
 
         if (user != null) {
@@ -140,7 +140,7 @@ public class Series extends Controller {
         }
         
         
-        models.BetaUser u = BetaUser.find("name", Security.connected()).first();
+        models.BetaUser u = models.BetaUser.findById(Long.parseLong(session.get("userid")));
         
         if (u.series.contains(s))
         {

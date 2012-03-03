@@ -20,15 +20,6 @@
                 <input type="password" name="password" id="password" value="" />
             </div>
         </div>
-
-        <div class="control-group">
-            <div class="controls">
-                <label class="checkbox">
-                    <input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} />
-                           <label for="remember">&{'secure.remember'}</label>
-                </label>
-            </div>
-        </div>
         #{if flash.error}
         <p class="alert alert-danger">
             &{flash.error}
