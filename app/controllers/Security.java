@@ -11,7 +11,7 @@ public class Security extends Secure.Security {
 
         validation.required(username);
         validation.required(password);
-        
+                
         if (!validation.hasErrors()) {
             BetaUser user = BetaUser.find("username", username).first();
 

@@ -67,7 +67,7 @@
            
                 $("#search-result").html("");
             
-                if (series.length == 0) {
+                if (series == undefined || series.length == 0) {
                     $("#search-result").html('<h3 style="color:red">No search results</h3>');
                 }
                 else
