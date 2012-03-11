@@ -28,14 +28,16 @@ public class Series extends Controller {
 
     public static void allSeries() {
 
-        List<Object[]> results = JPA.em().createNativeQuery("SELECT serviceSeriesId, COUNT(*) AS anz FROM BetaUser_Series, Series WHERE Series.id = BetaUser_Series.series_id GROUP BY serviceSeriesId ORDER BY anz desc").setMaxResults(9).getResultList();
-        List<String> ids = new ArrayList<String>();
-
-        for (Object[] val : results) {
-            ids.add(val[0].toString());
-        }
+        List<Series> series = JPA.em().createQuery("FROM Series s ORDER BY SIZE(s.users) desc")
+                .setMaxResults(9)
+                .getResultList();
         
-        render(ids);
+        JSONSerializer flex = new JSONSerializer().include(
+                    "serviceSeriesId").exclude("*");
+        
+        String jsonSeries = flex.serialize(series);
+        
+        render(jsonSeries);
     }
 
     public static void showSeries(String serviceSeriesId) {

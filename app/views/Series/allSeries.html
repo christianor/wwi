@@ -7,7 +7,7 @@
 <img id="loadImg" src="@{'public/img/loading.gif'}" style="display:none"/>
 <div id="search-result"> 
 </div>
-#{if ids}
+#{if jsonSeries}
 <hr class="soften"/>
 <h1 id="popSeriesHeader">Popular Series</h1>
 
@@ -31,18 +31,18 @@
     <div class="popseries span4"></div>
 </div>
 <script type="text/javascript">
-    var popseriesIds = ${ids.raw()};
+    var popseries = ${jsonSeries.raw()};
     var iExt = 0;
     
     
-    for (var i = 0; i < popseriesIds.length; i++) 
+    for (var i = 0; i < popseries.length; i++) 
     {
-        $.get("http://series-ortiz.rhcloud.com/series/" + popseriesIds[i] + "/info?s=thetvdb",
+        $.get("http://series-ortiz.rhcloud.com/series/" + popseries[i].serviceSeriesId + "/info?s=thetvdb",
         function(series){
             $($(".popseries")[iExt]).html('<h2><i class="icon-star" style="margin-top:8px"></i>'+series.name+'</h2>' + (series.description == null ? 'Currently no description available.' : series.description));
 
             
-            if (iExt == popseriesIds.length - 1)
+            if (iExt == popseries.length - 1)
                 $("#loadingMessage").fadeOut("fast");
             iExt++;
            
