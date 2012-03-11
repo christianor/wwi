@@ -43,18 +43,14 @@ public class Series extends Controller {
         if (series == null) {
             response.status = 500;
         } else {
-            // Long.parseLong(session.get("userid")), serviceSeriesId 
-            List<Episode> episodes = JPA.em().createNativeQuery("SELECT Episode.id, Episode.episodeNumber, Episode.seasonNumber, Series.id AS series_id FROM "
-                    + "BetaUser, Series, Episode, BetaUser_Series, BetaUser_Episode "
-                    + "WHERE "
-                    + "BetaUser.id = :userid "
-                    + "and Series.serviceSeriesId = :serviceseriesid "
-                    + "and Episode.series_id = Series.id "
-                    + "and BetaUser_Series.users_id = BetaUser.id "
-                    + "and BetaUser_Series.series_id = Series.id "
-                    + "and BetaUser_Episode.users_id  = BetaUser.id "
-                    + "and BetaUser_Episode.episodes_id = Episode.id", Episode.class).setParameter("userid", Long.parseLong(session.get("userid"))).setParameter("serviceseriesid", serviceSeriesId).getResultList();
-
+            
+            BetaUser user = BetaUser.find("username", Security.connected()).first();
+            
+            List<Episode> episodes = JPA.em().createQuery("FROM Episode e WHERE e.series = ?2 AND ?1 MEMBER OF e.users")
+                    .setParameter(1, user)
+                    .setParameter(2, series)
+                    .getResultList();
+            
             JSONSerializer flex = new JSONSerializer().include(
                     "episodeNumber",
                     "seasonNumber").exclude("*");
