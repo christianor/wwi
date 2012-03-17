@@ -72,9 +72,9 @@
                 }
                 else
                     for (var i = 0; i < series.length; i++)
-                    {
-                        $("#search-result").append('<div class="alert alert-success"><h3>' + series[i].name + '</h3>' + (series[i].description != null ? series[i].description : "")  + '<div><a href="#" data-loading-text="Adding it..." id="' + series[i].id + '" class="btn add-series"><i class="icon-plus"></i> Add To <i>My Series</i></a></div></div>');
-                    }
+                {
+                    $("#search-result").append('<div class="alert alert-success"><h3>' + series[i].name + '</h3>' + (series[i].description != null ? series[i].description : "")  + '<div><a href="#" data-loading-text="Adding it..." id="' + series[i].id + '" class="btn add-series"><i class="icon-plus"></i> Add To <i>My Series</i></a></div></div>');
+                }
 
                 $("#loadImg").toggle();
                 $("#search-result").fadeIn();
