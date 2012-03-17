@@ -21,11 +21,11 @@
 
     <body>
         <div class="navbar">
+            <a class="brand" href="/">
+                <i class="icon-facetime-video icon-white"></i> Where Was I
+            </a>
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand" href="/">
-                        <i class="icon-facetime-video icon-white"></i> Where Was I
-                    </a>
                     <div class="nav">
                         <ul class="nav">
                             <li %{ if (get('nav') == 'tvseries') out.print('class="active"') /}%><a href="@{Series.allSeries}">TV-Series</a></li>
@@ -51,7 +51,6 @@
                             #{/else}
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
