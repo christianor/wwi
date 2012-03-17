@@ -21,7 +21,7 @@
     </head>
 
     <body>
-        <div class="navbar">
+        <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -32,7 +32,7 @@
                     <a class="brand" href="/">
                         <i class="icon-facetime-video icon-white"></i> Where Was I
                     </a>
-                    <div class="nav-collapse">
+                    <div class="nav nav-collapse">
                         <ul class="nav">
                             <li %{ if (get('nav') == 'tvseries') out.print('class="active"') /}%><a href="@{Series.allSeries}">TV-Series</a></li>
                             <li %{ if (get('nav') == 'myseries') out.print('class="active"') /}% ><a href="@{Series.userSeries}">My Series</a></li>
