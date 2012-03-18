@@ -7,8 +7,7 @@
 <img id="loadImg" src="@{'public/img/loading.gif'}" style="display:none"/>
 <div id="search-result"> 
 </div>
-#{if jsonSeries}
-<hr class="soften"/>
+#{if jsonSeries != '[]'}
 <h1 id="popSeriesHeader">Popular Series</h1>
 
 <div class="alert alert-info" style="margin-top:10px" id="loadingMessage">
@@ -39,7 +38,7 @@
     {
         $.get("http://series-ortiz.rhcloud.com/series/" + popseries[i].serviceSeriesId + "/info?s=thetvdb",
         function(series){
-            $($(".popseries")[iExt]).html('<h2><i class="icon-star" style="margin-top:8px"></i>'+series.name+'</h2>' + (series.description == null ? 'Currently no description available.' : series.description));
+            $($(".popseries")[iExt]).html('<h2>' + series.name+'</h2>' + (series.description == null ? 'Currently no description available.' : series.description));
 
             
             if (iExt == popseries.length - 1)
@@ -68,12 +67,14 @@
                 $("#search-result").html("");
             
                 if (series == undefined || series.length == 0) {
-                    $("#search-result").html('<h3 style="color:red">No search results</h3>');
+                    $("#search-result").html('<div class="alert alert-danger">No search results</div>');
                 }
                 else
                     for (var i = 0; i < series.length; i++)
                 {
-                    $("#search-result").append('<div class="alert alert-success"><h3>' + series[i].name + '</h3>' + (series[i].description != null ? series[i].description : "")  + '<div><a href="#" data-loading-text="Adding it..." id="' + series[i].id + '" class="btn add-series"><i class="icon-plus"></i> Add To <i>My Series</i></a></div></div>');
+                    $("#search-result").append('<div><div><span style="font-weight:bold;font-size:x-large;vertical-align:middle">' + series[i].name + '</span>&nbsp;&nbsp;<a href="#" data-loading-text="Adding it..." id="' 
+                        + series[i].id + '" class="btn add-series"><i class="icon-plus"></i> Add To <i>My Series</i></a></div>' 
+                        + (series[i].description != null ? '<div style="margin-top:10px">' : '<div>') + (series[i].description != null ? series[i].description : "")  + '</div></div><hr class="soften"/>');
                 }
 
                 $("#loadImg").toggle();

@@ -33,7 +33,7 @@
             $.get("http://series-ortiz.rhcloud.com/series/" + row.attr("id") + "/info?s=thetvdb",
             function(series){
                 row.children(":first").html('<a href="/series/my/' + row.attr("id") + '.html">' + series.name + '</a>');
-                row.children(":nth-child(2)").text(series.description);
+                row.children(":nth-child(2)").text(series.description == null ? 'Currently no description available' : series.description);
                 
                 compareCounter++;
             
