@@ -16,7 +16,7 @@ import play.db.jpa.Model;
  * @author Christian
  */
 @Entity
-public class User extends Model {
+public class WWIUser extends Model {
     @Unique
     @Required
     public String email;
@@ -25,7 +25,7 @@ public class User extends Model {
     @ManyToMany
     public List<Episode> episodes;
     
-    public User(String email) {
+    public WWIUser(String email) {
         this.email = email;
     }    
     

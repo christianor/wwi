@@ -9,7 +9,7 @@ import flexjson.JSONSerializer;
 import java.util.ArrayList;
 import java.util.List;
 import models.Episode;
-import models.User;
+import models.WWIUser;
 import play.db.jpa.JPA;
 import play.mvc.Controller;
 import play.mvc.With;
@@ -22,7 +22,7 @@ import play.mvc.With;
 public class Series extends Controller {
 
     public static void userSeries() {
-        User user = User.findById(Long.parseLong(session.get("userId")));
+        WWIUser user = WWIUser.findById(Long.parseLong(session.get("userId")));
         render(user);
     }
 
@@ -63,7 +63,7 @@ public class Series extends Controller {
 
     public static void trackEpisode(String seriesId, int seasonNumber, int episodeNumber, String authenticityToken) {
         checkAuthenticity();
-        User user = User.findById(Long.parseLong(session.get("userId")));
+        WWIUser user = WWIUser.findById(Long.parseLong(session.get("userId")));
         String json = "{}";
 
         if (user != null) {
@@ -89,11 +89,11 @@ public class Series extends Controller {
 
             if (user.episodes.contains(episode)) {
                 user.episodes.remove(episode);
-                JPA.em().createNativeQuery("DELETE FROM User_Episode WHERE users_id = ? AND episodes_id = ?").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+                JPA.em().createNativeQuery("DELETE FROM WWIUser_Episode WHERE users_id = ? AND episodes_id = ?").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
                 json = "{ \"response\": \"removed\"}";
 
             } else {
-                JPA.em().createNativeQuery("INSERT INTO User_Episode (users_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+                JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (users_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
                 json = "{ \"response\": \"added\"}";
             }
 
@@ -128,7 +128,7 @@ public class Series extends Controller {
         }
 
 
-        models.User u = models.User.findById(Long.parseLong(session.get("userId")));
+        WWIUser u = WWIUser.findById(Long.parseLong(session.get("userId")));
 
         if (u.series.contains(s)) {
             renderJSON("{\"response\": \"nothing\"}");

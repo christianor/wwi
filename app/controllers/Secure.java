@@ -1,11 +1,10 @@
 package controllers;
 
-import models.User;
+import models.WWIUser;
 import play.libs.OpenID;
 import play.libs.OpenID.UserInfo;
 import play.mvc.Before;
 import play.mvc.Controller;
-import play.mvc.Scope.Session;
 
 public class Secure extends Controller {
 
@@ -36,9 +35,9 @@ public class Secure extends Controller {
             
             String email = verifiedUser.extensions.get("email");
             
-            User wwiUser = User.find("email", email).first();
+            WWIUser wwiUser = WWIUser.find("email", email).first();
             if (wwiUser == null) {
-                wwiUser = new User(email).save();
+                wwiUser = new WWIUser(email).save();
             }
              
             session.put("userId", wwiUser.id);

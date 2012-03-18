@@ -28,7 +28,7 @@ public class Episode extends Model {
     @Required
     public Series series;
     @ManyToMany(mappedBy = "episodes")
-    public List<User> users;
+    public List<WWIUser> users;
 
     @Override
     public String toString() {
@@ -41,7 +41,7 @@ public class Episode extends Model {
             throw new Exception("Series not found");
         }
 
-        User user = User.find("id", userid).first();
+        WWIUser user = WWIUser.find("id", userid).first();
 
         return JPA.em().createQuery("FROM Episode e WHERE e.series = ?2 AND ?1 MEMBER OF e.users")
                 .setParameter(1, user)
