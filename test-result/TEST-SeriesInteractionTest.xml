@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="0.112" errors="0" skipped="0" tests="2" name="SeriesInteractionTest">
+  <testcase classname="SeriesInteractionTest" name="testIllegalEpisodeTracking" time="0.041">
+      </testcase>
+  <testcase classname="SeriesInteractionTest" name="testTrackAndUntrack" time="0.071">
+      </testcase>
+</testsuite>

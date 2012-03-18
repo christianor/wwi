@@ -4,13 +4,11 @@
  */
 package models;
 
-import controllers.Secure;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import play.data.validation.Required;
-import play.db.jpa.JPA;
 import play.db.jpa.Model;
 
 /**
@@ -29,23 +27,4 @@ public class Episode extends Model {
     public Series series;
     @ManyToMany(mappedBy = "episodes")
     public List<WWIUser> users;
-
-    @Override
-    public String toString() {
-        return this.series.name + " Season " + this.seasonNumber + " Episode " + this.episodeNumber;
-    }
-
-    public static List<Episode> getEpisodes(long userid, String serviceSeriesId) throws Exception {
-        models.Series series = models.Series.find("serviceSeriesId", serviceSeriesId).first();
-        if (series == null) {
-            throw new Exception("Series not found");
-        }
-
-        WWIUser user = WWIUser.find("id", userid).first();
-
-        return JPA.em().createQuery("FROM Episode e WHERE e.series = ?2 AND ?1 MEMBER OF e.users")
-                .setParameter(1, user)
-                .setParameter(2, series)
-                .getResultList();
-    }
 }

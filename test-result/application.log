@@ -1,0 +1,89 @@
+18 Mrz 2012 22:28:18,944 INFO  ~ Starting /Users/Christian/Dropbox/Repositories/wherewasi
+18 Mrz 2012 22:28:19,746 WARN  ~ You're running Play! in DEV mode
+18 Mrz 2012 22:28:19,901 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+18 Mrz 2012 22:28:21,771 ERROR ~ Invalid route definition : GET /
+18 Mrz 2012 22:28:23,205 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+18 Mrz 2012 22:28:24,231 INFO  ~ Application 'wherewasi' is now started !
+18 Mrz 2012 22:28:31,029 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:28:31,052 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:28:31,055 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:31:49,242 ERROR ~ Invalid route definition : GET /
+18 Mrz 2012 22:31:52,193 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
+18 Mrz 2012 22:31:52,220 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
+18 Mrz 2012 22:31:52,228 DEBUG ~ select wwiuser0_.id as id9_, wwiuser0_.email as email9_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:31:52,248 DEBUG ~ select series0_.id as id10_, series0_.name as name10_, series0_.serviceSeriesId as serviceS3_10_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:31:52,274 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
+18 Mrz 2012 22:31:52,284 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
+18 Mrz 2012 22:31:52,287 DEBUG ~ select series0_.id as id10_, series0_.name as name10_, series0_.serviceSeriesId as serviceS3_10_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:31:52,290 DEBUG ~ select wwiuser0_.id as id9_, wwiuser0_.email as email9_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:31:52,293 DEBUG ~ select series0_.id as id10_, series0_.name as name10_, series0_.serviceSeriesId as serviceS3_10_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:31:52,306 DEBUG ~ select episode0_.id as id8_, episode0_.episodeNumber as episodeN2_8_, episode0_.seasonNumber as seasonNu3_8_, episode0_.series_id as series4_8_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+18 Mrz 2012 22:31:52,310 DEBUG ~ insert into Episode (id, episodeNumber, seasonNumber, series_id) values (null, ?, ?, ?)
+18 Mrz 2012 22:31:52,317 DEBUG ~ select episodes0_.users_id as users1_9_2_, episodes0_.episodes_id as episodes2_2_, episode1_.id as id8_0_, episode1_.episodeNumber as episodeN2_8_0_, episode1_.seasonNumber as seasonNu3_8_0_, episode1_.series_id as series4_8_0_, series2_.id as id10_1_, series2_.name as name10_1_, series2_.serviceSeriesId as serviceS3_10_1_ from WWIUser_Episode episodes0_ inner join Episode episode1_ on episodes0_.episodes_id=episode1_.id left outer join Series series2_ on episode1_.series_id=series2_.id where episodes0_.users_id=?
+18 Mrz 2012 22:31:52,342 DEBUG ~ INSERT INTO WWIUser_Episode (users_id, episodes_id) VALUES (?, ?)
+18 Mrz 2012 22:31:52,343 DEBUG ~ select wwiuser0_.id as id9_, wwiuser0_.email as email9_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:31:52,346 DEBUG ~ select series0_.id as id10_, series0_.name as name10_, series0_.serviceSeriesId as serviceS3_10_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:31:52,352 DEBUG ~ select wwiuser0_.id as id9_, wwiuser0_.email as email9_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+18 Mrz 2012 22:31:52,368 DEBUG ~ select episode0_.id as id8_, episode0_.episodeNumber as episodeN2_8_, episode0_.seasonNumber as seasonNu3_8_, episode0_.series_id as series4_8_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUser_Episode users1_, WWIUser wwiuser2_ where episode0_.id=users1_.episodes_id and users1_.users_id=wwiuser2_.id))
+18 Mrz 2012 22:31:52,373 DEBUG ~ select wwiuser0_.id as id9_, wwiuser0_.email as email9_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:31:52,375 DEBUG ~ select series0_.id as id10_, series0_.name as name10_, series0_.serviceSeriesId as serviceS3_10_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:31:52,377 DEBUG ~ select episode0_.id as id8_, episode0_.episodeNumber as episodeN2_8_, episode0_.seasonNumber as seasonNu3_8_, episode0_.series_id as series4_8_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+18 Mrz 2012 22:31:52,378 DEBUG ~ INSERT INTO WWIUser_Episode (users_id, episodes_id) VALUES (?, ?)
+18 Mrz 2012 22:31:52,379 DEBUG ~ select wwiuser0_.id as id9_, wwiuser0_.email as email9_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:31:52,380 DEBUG ~ select series0_.id as id10_, series0_.name as name10_, series0_.serviceSeriesId as serviceS3_10_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:31:52,382 DEBUG ~ select wwiuser0_.id as id9_, wwiuser0_.email as email9_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+18 Mrz 2012 22:31:52,383 DEBUG ~ select episode0_.id as id8_, episode0_.episodeNumber as episodeN2_8_, episode0_.seasonNumber as seasonNu3_8_, episode0_.series_id as series4_8_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUser_Episode users1_, WWIUser wwiuser2_ where episode0_.id=users1_.episodes_id and users1_.users_id=wwiuser2_.id))
+18 Mrz 2012 22:40:05,713 ERROR ~ Invalid route definition : GET /
+18 Mrz 2012 22:40:08,593 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
+18 Mrz 2012 22:40:08,613 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
+18 Mrz 2012 22:40:08,624 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:40:08,631 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:40:08,646 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
+18 Mrz 2012 22:40:08,655 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
+18 Mrz 2012 22:40:08,660 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:40:08,662 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:40:08,665 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:40:08,679 DEBUG ~ select episode0_.id as id16_, episode0_.episodeNumber as episodeN2_16_, episode0_.seasonNumber as seasonNu3_16_, episode0_.series_id as series4_16_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+18 Mrz 2012 22:40:08,681 DEBUG ~ insert into Episode (id, episodeNumber, seasonNumber, series_id) values (null, ?, ?, ?)
+18 Mrz 2012 22:40:08,684 DEBUG ~ select episodes0_.users_id as users1_17_2_, episodes0_.episodes_id as episodes2_2_, episode1_.id as id16_0_, episode1_.episodeNumber as episodeN2_16_0_, episode1_.seasonNumber as seasonNu3_16_0_, episode1_.series_id as series4_16_0_, series2_.id as id18_1_, series2_.name as name18_1_, series2_.serviceSeriesId as serviceS3_18_1_ from WWIUser_Episode episodes0_ inner join Episode episode1_ on episodes0_.episodes_id=episode1_.id left outer join Series series2_ on episode1_.series_id=series2_.id where episodes0_.users_id=?
+18 Mrz 2012 22:40:08,694 DEBUG ~ INSERT INTO WWIUser_Episode (users_id, episodes_id) VALUES (?, ?)
+18 Mrz 2012 22:40:08,696 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:40:08,698 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:40:08,711 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+18 Mrz 2012 22:40:08,726 DEBUG ~ select episode0_.id as id16_, episode0_.episodeNumber as episodeN2_16_, episode0_.seasonNumber as seasonNu3_16_, episode0_.series_id as series4_16_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUser_Episode users1_, WWIUser wwiuser2_ where episode0_.id=users1_.episodes_id and users1_.users_id=wwiuser2_.id))
+18 Mrz 2012 22:40:08,728 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:40:08,730 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:40:08,733 DEBUG ~ select episode0_.id as id16_, episode0_.episodeNumber as episodeN2_16_, episode0_.seasonNumber as seasonNu3_16_, episode0_.series_id as series4_16_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+18 Mrz 2012 22:40:08,738 DEBUG ~ INSERT INTO WWIUser_Episode (users_id, episodes_id) VALUES (?, ?)
+18 Mrz 2012 22:40:08,739 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:40:08,741 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:40:08,743 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+18 Mrz 2012 22:40:08,746 DEBUG ~ select episode0_.id as id16_, episode0_.episodeNumber as episodeN2_16_, episode0_.seasonNumber as seasonNu3_16_, episode0_.series_id as series4_16_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUser_Episode users1_, WWIUser wwiuser2_ where episode0_.id=users1_.episodes_id and users1_.users_id=wwiuser2_.id))
+18 Mrz 2012 22:42:06,228 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
+18 Mrz 2012 22:42:06,238 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
+18 Mrz 2012 22:42:06,242 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:42:06,249 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:42:06,261 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
+18 Mrz 2012 22:42:06,274 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
+18 Mrz 2012 22:42:06,278 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:42:06,280 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:42:06,282 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:42:06,284 DEBUG ~ select episode0_.id as id16_, episode0_.episodeNumber as episodeN2_16_, episode0_.seasonNumber as seasonNu3_16_, episode0_.series_id as series4_16_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+18 Mrz 2012 22:42:06,286 DEBUG ~ insert into Episode (id, episodeNumber, seasonNumber, series_id) values (null, ?, ?, ?)
+18 Mrz 2012 22:42:06,290 DEBUG ~ select episodes0_.users_id as users1_17_2_, episodes0_.episodes_id as episodes2_2_, episode1_.id as id16_0_, episode1_.episodeNumber as episodeN2_16_0_, episode1_.seasonNumber as seasonNu3_16_0_, episode1_.series_id as series4_16_0_, series2_.id as id18_1_, series2_.name as name18_1_, series2_.serviceSeriesId as serviceS3_18_1_ from WWIUser_Episode episodes0_ inner join Episode episode1_ on episodes0_.episodes_id=episode1_.id left outer join Series series2_ on episode1_.series_id=series2_.id where episodes0_.users_id=?
+18 Mrz 2012 22:42:06,293 DEBUG ~ INSERT INTO WWIUser_Episode (users_id, episodes_id) VALUES (?, ?)
+18 Mrz 2012 22:42:06,297 DEBUG ~ select wwiuser0_.id as id17_0_, wwiuser0_.email as email17_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+18 Mrz 2012 22:42:06,300 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:42:06,302 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:42:06,303 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+18 Mrz 2012 22:42:06,305 DEBUG ~ select episode0_.id as id16_, episode0_.episodeNumber as episodeN2_16_, episode0_.seasonNumber as seasonNu3_16_, episode0_.series_id as series4_16_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUser_Episode users1_, WWIUser wwiuser2_ where episode0_.id=users1_.episodes_id and users1_.users_id=wwiuser2_.id))
+18 Mrz 2012 22:42:06,307 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:42:06,309 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:42:06,310 DEBUG ~ select episode0_.id as id16_, episode0_.episodeNumber as episodeN2_16_, episode0_.seasonNumber as seasonNu3_16_, episode0_.series_id as series4_16_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+18 Mrz 2012 22:42:06,312 DEBUG ~ select episodes0_.users_id as users1_17_2_, episodes0_.episodes_id as episodes2_2_, episode1_.id as id16_0_, episode1_.episodeNumber as episodeN2_16_0_, episode1_.seasonNumber as seasonNu3_16_0_, episode1_.series_id as series4_16_0_, series2_.id as id18_1_, series2_.name as name18_1_, series2_.serviceSeriesId as serviceS3_18_1_ from WWIUser_Episode episodes0_ inner join Episode episode1_ on episodes0_.episodes_id=episode1_.id left outer join Series series2_ on episode1_.series_id=series2_.id where episodes0_.users_id=?
+18 Mrz 2012 22:42:06,314 DEBUG ~ DELETE FROM WWIUser_Episode WHERE users_id = ? AND episodes_id = ?
+18 Mrz 2012 22:42:06,315 DEBUG ~ select wwiuser0_.id as id17_0_, wwiuser0_.email as email17_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+18 Mrz 2012 22:42:06,317 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+18 Mrz 2012 22:42:06,318 DEBUG ~ select series0_.id as id18_, series0_.name as name18_, series0_.serviceSeriesId as serviceS3_18_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+18 Mrz 2012 22:42:06,319 DEBUG ~ select wwiuser0_.id as id17_, wwiuser0_.email as email17_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+18 Mrz 2012 22:42:06,320 DEBUG ~ select episode0_.id as id16_, episode0_.episodeNumber as episodeN2_16_, episode0_.seasonNumber as seasonNu3_16_, episode0_.series_id as series4_16_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUser_Episode users1_, WWIUser wwiuser2_ where episode0_.id=users1_.episodes_id and users1_.users_id=wwiuser2_.id))

@@ -5,3 +5,10 @@
 #   email: bob@gmail.com
 #   password: secret
 #   fullname: Bob
+
+WWIUser(chris):
+  email: chris.ortiz.reina@googlemail.com
+  
+Series(Supernatural):
+  serviceSeriesId: 1
+  name: Supernatural

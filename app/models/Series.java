@@ -8,7 +8,9 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.persistence.UniqueConstraint;
 import play.data.validation.Required;
 import play.db.jpa.JPA;
 import play.db.jpa.Model;
@@ -18,6 +20,7 @@ import play.db.jpa.Model;
  * @author Christian
  */
 @Entity
+@Table(uniqueConstraints={@UniqueConstraint(columnNames={"serviceSeriesId"})})
 public class Series extends Model {
     @Required
     public String serviceSeriesId;
