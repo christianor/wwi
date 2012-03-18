@@ -22,7 +22,7 @@ public class Series extends Model {
     @Required
     public String serviceSeriesId;
     @ManyToMany(mappedBy="series")
-    public List<BetaUser> users;
+    public List<User> users;
     @OneToMany(mappedBy="series")
     public List<Episode> episodes;
     public String name;

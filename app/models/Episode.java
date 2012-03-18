@@ -4,7 +4,7 @@
  */
 package models;
 
-import controllers.Security;
+import controllers.Secure;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
@@ -28,20 +28,20 @@ public class Episode extends Model {
     @Required
     public Series series;
     @ManyToMany(mappedBy = "episodes")
-    public List<BetaUser> users;
+    public List<User> users;
 
     @Override
     public String toString() {
         return this.series.name + " Season " + this.seasonNumber + " Episode " + this.episodeNumber;
     }
 
-    public static List<Episode> getEpisodes(String username, String serviceSeriesId) throws Exception {
+    public static List<Episode> getEpisodes(long userid, String serviceSeriesId) throws Exception {
         models.Series series = models.Series.find("serviceSeriesId", serviceSeriesId).first();
         if (series == null) {
             throw new Exception("Series not found");
         }
 
-        BetaUser user = BetaUser.find("username", username).first();
+        User user = User.find("id", userid).first();
 
         return JPA.em().createQuery("FROM Episode e WHERE e.series = ?2 AND ?1 MEMBER OF e.users")
                 .setParameter(1, user)

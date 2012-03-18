@@ -16,26 +16,17 @@ import play.db.jpa.Model;
  * @author Christian
  */
 @Entity
-public class BetaUser extends Model {
+public class User extends Model {
     @Unique
     @Required
-    public String username;
-    @Required
-    public String password;
+    public String email;
     @ManyToMany
     public List<Series> series;
     @ManyToMany
     public List<Episode> episodes;
     
-    public BetaUser(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-    
-    @Override
-    public String toString() {
-        return this.username;
-    }
-            
+    public User(String email) {
+        this.email = email;
+    }    
     
 }

@@ -1,7 +1,0 @@
-BetaUser(admin):
-  username: admin
-  password: gavina98
-  
-BetaUser(test):
-  username: test
-  password: test
