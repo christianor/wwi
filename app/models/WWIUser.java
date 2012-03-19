@@ -32,7 +32,7 @@ public class WWIUser extends Model {
     public String email;
     @ManyToMany
     @JoinTable(name = "WWIUSER_SERIES", joinColumns = {
-        @JoinColumn(name = "WWIUSER_ID")
+        @JoinColumn(name = "WWIUSERS_ID")
     }, inverseJoinColumns = {
         @JoinColumn(name = "SERIES_ID")
     }, uniqueConstraints = {
@@ -44,9 +44,9 @@ public class WWIUser extends Model {
     public List<Series> series;
     @ManyToMany
     @JoinTable(name = "WWIUSER_EPISODE", joinColumns = {
-        @JoinColumn(name = "WWIUSER_ID")
+        @JoinColumn(name = "WWIUSERS_ID")
     }, inverseJoinColumns = {
-        @JoinColumn(name = "EPISODE_ID")
+        @JoinColumn(name = "EPISODES_ID")
     }, uniqueConstraints = {
         @UniqueConstraint(columnNames = {
             "WWIUSERS_ID",
