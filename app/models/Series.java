@@ -26,7 +26,7 @@ public class Series extends Model {
     public String serviceSeriesId;
     @ManyToMany(mappedBy="series")
     public List<WWIUser> users;
-    @OneToMany(mappedBy="series")
+    @OneToMany
     public List<Episode> episodes;
     public String name;
 

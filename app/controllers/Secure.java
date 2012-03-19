@@ -42,7 +42,9 @@ public class Secure extends Controller {
              
             session.put("userId", wwiUser.id);
             session.put("userEmail", email);
+            
             Series.userSeries();
+            
         } else {
             if (!OpenID.id(request.params.get("openid_identifier"))
                     .required("email", "http://axschema.org/contact/email")
@@ -61,4 +63,5 @@ public class Secure extends Controller {
     public static long connectedId() {
         return Long.parseLong(session.get("userId"));
     }
+    
 }

@@ -1,5 +1,6 @@
 
 import exceptions.SeriesNotFoundException;
+import java.util.logging.Logger;
 import models.WWIUser;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,24 +26,30 @@ public class EpisodeTrackingTest extends UnitTest {
 
     @Test(expected = SeriesNotFoundException.class)
     public void testIllegalEpisodeTracking() throws SeriesNotFoundException {
-
         WWIUser.trackEpisode(getUser().id, "xxx", 1, 1);
-
-
     }
 
     @Test
     public void testTrackAndUntrack() throws SeriesNotFoundException {
 
-        models.Series series = models.Series.find("serviceSeriesId", "1").first();
+        
+        WWIUser user = getUser();
+        
+        play.Logger.debug("starting tack and untrack test");
+        
+        WWIUser.trackEpisode(user.id, "1", 1, 1);
+        
+        play.Logger.debug("tracked episode");
+        
+        user.refresh();
+        assertEquals(WWIUser.getEpisodes(user.id, "1").size(), 1);
 
-        WWIUser.trackEpisode(getUser().id, series.serviceSeriesId, 1, 1);
-
-        assertEquals(WWIUser.getEpisodes(getUser().id, series.serviceSeriesId).size(), 1);
-
-        WWIUser.trackEpisode(getUser().id, series.serviceSeriesId, 1, 1);
-
-        assertEquals(WWIUser.getEpisodes(getUser().id, series.serviceSeriesId).size(), 0);
+        WWIUser.trackEpisode(user.id, "1", 1, 1);
+        
+        user.refresh();
+        assertEquals(WWIUser.getEpisodes(user.id, "1").size(), 0);
+        
+        play.Logger.debug("finished tack and untrack test");
 
 
     }

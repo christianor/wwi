@@ -38,10 +38,7 @@ public class Series extends Controller {
         render(jsonSeries);
     }
 
-    /*
-     * 
-     * TODO: Check if the WWIUser has added this series to "his series", if not, add it
-     */
+    
     public static void showSeries(String serviceSeriesId) {
 
         List<Episode> episodes = null;
@@ -110,7 +107,7 @@ public class Series extends Controller {
         }
 
 
-        WWIUser u = WWIUser.findById(Long.parseLong(session.get("userId")));
+        WWIUser u = WWIUser.findById(Secure.connectedId());
 
         if (u.series.contains(s)) {
             renderJSON("{\"response\": \"nothing\"}");
