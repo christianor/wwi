@@ -37,7 +37,7 @@ public class WWIUser extends Model {
         @JoinColumn(name = "SERIES_ID")
     }, uniqueConstraints = {
         @UniqueConstraint(columnNames = {
-            "WWIUSER_ID",
+            "WWIUSERS_ID",
             "SERIES_ID"
         })
     })
@@ -49,8 +49,8 @@ public class WWIUser extends Model {
         @JoinColumn(name = "EPISODE_ID")
     }, uniqueConstraints = {
         @UniqueConstraint(columnNames = {
-            "WWIUSER_ID",
-            "EPISODE_ID"
+            "WWIUSERS_ID",
+            "EPISODES_ID"
         })
     })
     public List<Episode> episodes;
@@ -88,18 +88,18 @@ public class WWIUser extends Model {
             episode.series = series;
             episode.save();
 
-            JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (users_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+            JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
 
             return true;
         }
 
         if (user.episodes.contains(episode)) {
-            JPA.em().createNativeQuery("DELETE FROM WWIUser_Episode WHERE users_id = ? AND episodes_id = ?").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+            JPA.em().createNativeQuery("DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
             user.episodes.remove(episode);
             return false;
 
         } else {
-            JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (users_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+            JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
             user.episodes.add(episode);
             return true;
         }
