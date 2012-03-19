@@ -5,7 +5,7 @@
 GET     /logout               Secure.logout
 GET     /login                Secure.login
 *       /authenticate         Secure.authenticate
-GET     /
+GET     /                     Application.index
 
 # Home page
 POST    /series/my/track/episode/{seriesId}/{seasonNumber}/{episodeNumber}/{authenticityToken}     Series.trackEpisode
