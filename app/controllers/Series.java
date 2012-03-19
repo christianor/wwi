@@ -23,7 +23,7 @@ import play.mvc.With;
 public class Series extends Controller {
 
     public static void userSeries() {
-        WWIUser user = WWIUser.findById(Long.parseLong(session.get("userId")));
+        WWIUser user = WWIUser.findById(Secure.connectedId());
         render(user);
     }
 

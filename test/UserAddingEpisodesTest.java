@@ -28,10 +28,12 @@ public class UserAddingEpisodesTest extends UnitTest {
    public void TestAddingEpisodes() {
        WWIUser user = WWIUser.find("email", "chris.ortiz.reina@googlemail.com").first();
        
+       user.series.add((Series)Series.find("serviceSeriesId", "tt0773262").first());
+
        Episode e = new Episode();
        e.episodeNumber = 1;
        e.seasonNumber = 1;
-       e.series = Series.find("serviceSeriesId", "1").first();
+       e.series = Series.find("serviceSeriesId", "tt0773262").first();
        e.save();
        
        user.episodes.add(e);
@@ -40,7 +42,7 @@ public class UserAddingEpisodesTest extends UnitTest {
        Episode e2 = new Episode();
        e2.episodeNumber = 2;
        e2.seasonNumber = 1;
-       e2.series = Series.find("serviceSeriesId", "1").first();
+       e2.series = Series.find("serviceSeriesId", "tt0773262").first();
        e2.save();
        
        user.episodes.add(e2);

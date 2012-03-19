@@ -4,7 +4,6 @@
  */
 package models;
 
-import controllers.Secure;
 import exceptions.SeriesNotFoundException;
 import java.util.List;
 import javax.persistence.Entity;
@@ -71,7 +70,7 @@ public class WWIUser extends Model {
      */
     public static boolean trackEpisode(long userid, String seriesId, int seasonNumber, int episodeNumber) throws SeriesNotFoundException {
 
-        WWIUser user = WWIUser.findById(Secure.connectedId());
+        WWIUser user = WWIUser.findById(userid);
 
         Series series = models.Series.find("serviceSeriesId", seriesId).first();
 
