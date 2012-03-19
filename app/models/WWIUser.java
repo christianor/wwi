@@ -94,12 +94,10 @@ public class WWIUser extends Model {
 
         if (user.episodes.contains(episode)) {
             JPA.em().createNativeQuery("DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
-            user.episodes.remove(episode);
             return false;
 
         } else {
             JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
-            user.episodes.add(episode);
             return true;
         }
 
