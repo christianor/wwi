@@ -40,13 +40,12 @@ public class EpisodeTrackingTest extends UnitTest {
         WWIUser.trackEpisode(user.id, "tt0773262", 1, 1);
         
         play.Logger.debug("tracked episode");
-        
-        user.refresh();
+      
         assertEquals(WWIUser.getEpisodes(user.id, "tt0773262").size(), 1);
 
+        play.Logger.debug("starting to untrack");
         WWIUser.trackEpisode(user.id, "tt0773262", 1, 1);
-        
-        user.refresh();
+        play.Logger.debug("untracked episode");
         assertEquals(WWIUser.getEpisodes(user.id, "tt0773262").size(), 0);
         
         play.Logger.debug("finished tack and untrack test");

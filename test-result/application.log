@@ -1,95 +1,859 @@
-19 Mrz 2012 23:07:09,739 INFO  ~ Starting /Users/Christian/Dropbox/Repositories/wherewasi
-19 Mrz 2012 23:07:10,664 WARN  ~ You're running Play! in DEV mode
-19 Mrz 2012 23:07:10,788 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-19 Mrz 2012 23:07:14,656 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
-19 Mrz 2012 23:07:15,614 INFO  ~ Application 'wherewasi' is now started !
-19 Mrz 2012 23:07:20,796 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
-19 Mrz 2012 23:07:20,828 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
-19 Mrz 2012 23:07:20,843 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-19 Mrz 2012 23:07:20,865 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:07:20,883 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
-19 Mrz 2012 23:07:20,895 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
-19 Mrz 2012 23:07:20,899 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-19 Mrz 2012 23:07:20,901 DEBUG ~ starting tack and untrack test
-19 Mrz 2012 23:07:20,902 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:07:20,911 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-19 Mrz 2012 23:07:20,914 DEBUG ~ insert into Episode (id, episodeNumber, seasonNumber, series_id) values (null, ?, ?, ?)
-19 Mrz 2012 23:07:20,944 ERROR ~ line 1:32: unexpected token: VALUES
-19 Mrz 2012 23:07:39,969 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
-19 Mrz 2012 23:07:39,985 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
-19 Mrz 2012 23:07:39,989 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-19 Mrz 2012 23:07:39,993 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:07:40,014 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
-19 Mrz 2012 23:07:40,029 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
-19 Mrz 2012 23:07:40,034 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-19 Mrz 2012 23:07:40,037 DEBUG ~ starting tack and untrack test
-19 Mrz 2012 23:07:40,038 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:07:40,041 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-19 Mrz 2012 23:07:40,044 DEBUG ~ insert into Episode (id, episodeNumber, seasonNumber, series_id) values (null, ?, ?, ?)
-19 Mrz 2012 23:07:40,048 ERROR ~ line 1:32: unexpected token: (
-19 Mrz 2012 23:07:58,609 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
-19 Mrz 2012 23:07:58,634 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
-19 Mrz 2012 23:07:58,638 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-19 Mrz 2012 23:07:58,642 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:07:58,663 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
-19 Mrz 2012 23:07:58,678 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
-19 Mrz 2012 23:07:58,682 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-19 Mrz 2012 23:07:58,684 DEBUG ~ starting tack and untrack test
-19 Mrz 2012 23:07:58,685 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:07:58,687 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-19 Mrz 2012 23:07:58,690 DEBUG ~ insert into Episode (id, episodeNumber, seasonNumber, series_id) values (null, ?, ?, ?)
-19 Mrz 2012 23:07:58,694 ERROR ~ line 1:32: unexpected token: values
-19 Mrz 2012 23:32:33,032 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
-19 Mrz 2012 23:32:33,048 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
-19 Mrz 2012 23:32:33,055 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-19 Mrz 2012 23:32:33,059 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:32:33,077 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
-19 Mrz 2012 23:32:33,090 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
-19 Mrz 2012 23:32:33,095 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-19 Mrz 2012 23:32:33,097 DEBUG ~ starting tack and untrack test
-19 Mrz 2012 23:32:33,098 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:32:33,100 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-19 Mrz 2012 23:32:33,102 DEBUG ~ insert into Episode (id, episodeNumber, seasonNumber, series_id) values (null, ?, ?, ?)
-19 Mrz 2012 23:32:33,106 ERROR ~ line 1:23: unexpected token: (
-19 Mrz 2012 23:32:33,107 ERROR ~ line 1:46: expecting "set", found 'WHERE'
-19 Mrz 2012 23:41:31,092 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
-19 Mrz 2012 23:41:31,107 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
-19 Mrz 2012 23:41:31,113 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-19 Mrz 2012 23:41:31,122 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:41:31,138 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
-19 Mrz 2012 23:41:31,151 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
-19 Mrz 2012 23:41:31,155 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-19 Mrz 2012 23:41:31,156 DEBUG ~ starting tack and untrack test
-19 Mrz 2012 23:41:31,157 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:41:31,159 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-19 Mrz 2012 23:41:31,161 DEBUG ~ insert into Episode (id, episodeNumber, seasonNumber, series_id) values (null, ?, ?, ?)
-19 Mrz 2012 23:41:31,181 DEBUG ~ INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)
-19 Mrz 2012 23:41:31,182 DEBUG ~ tracked episode
-19 Mrz 2012 23:41:31,184 DEBUG ~ select wwiuser0_.id as id1_0_, wwiuser0_.email as email1_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-19 Mrz 2012 23:41:31,187 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:41:31,192 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
-19 Mrz 2012 23:41:31,205 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
-19 Mrz 2012 23:41:31,210 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:41:31,211 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-19 Mrz 2012 23:41:31,214 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS1_1_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id0_0_, episode1_.episodeNumber as episodeN2_0_0_, episode1_.seasonNumber as seasonNu3_0_0_, episode1_.series_id as series4_0_0_, series2_.id as id2_1_, series2_.name as name2_1_, series2_.serviceSeriesId as serviceS3_2_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
-19 Mrz 2012 23:41:31,224 DEBUG ~ DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?
-19 Mrz 2012 23:41:31,224 DEBUG ~ select wwiuser0_.id as id1_0_, wwiuser0_.email as email1_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-19 Mrz 2012 23:41:31,226 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:41:31,227 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
-19 Mrz 2012 23:41:31,229 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
-19 Mrz 2012 23:41:31,230 DEBUG ~ finished tack and untrack test
-19 Mrz 2012 23:41:31,283 DEBUG ~ insert into WWIUser (id, email) values (null, ?)
-19 Mrz 2012 23:41:31,304 DEBUG ~ insert into Series (id, name, serviceSeriesId) values (null, ?, ?)
-19 Mrz 2012 23:41:31,308 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-19 Mrz 2012 23:41:31,318 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:41:31,320 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS1_1_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id2_0_, series1_.name as name2_0_, series1_.serviceSeriesId as serviceS3_2_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-19 Mrz 2012 23:41:31,322 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:41:31,323 DEBUG ~ insert into Episode (id, episodeNumber, seasonNumber, series_id) values (null, ?, ?, ?)
-19 Mrz 2012 23:41:31,326 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS1_1_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id0_0_, episode1_.episodeNumber as episodeN2_0_0_, episode1_.seasonNumber as seasonNu3_0_0_, episode1_.series_id as series4_0_0_, series2_.id as id2_1_, series2_.name as name2_1_, series2_.serviceSeriesId as serviceS3_2_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
-19 Mrz 2012 23:41:31,344 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
-19 Mrz 2012 23:41:31,345 DEBUG ~ insert into WWIUSER_SERIES (WWIUSERS_ID, SERIES_ID) values (?, ?)
-19 Mrz 2012 23:41:31,346 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-19 Mrz 2012 23:41:31,347 DEBUG ~ insert into Episode (id, episodeNumber, seasonNumber, series_id) values (null, ?, ?, ?)
-19 Mrz 2012 23:41:31,351 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=?
-19 Mrz 2012 23:41:31,352 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
-19 Mrz 2012 23:41:31,352 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:21:04,161 INFO  ~ Starting /Users/Christian/Dropbox/Repositories/wherewasi
+20 Mrz 2012 00:21:04,906 WARN  ~ You're running Play! in DEV mode
+20 Mrz 2012 00:21:05,023 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+20 Mrz 2012 00:21:15,788 ERROR ~ 
+
+@69mcppcb2
+Internal Server Error (500) for request GET /@tests?select=EpisodeTrackingTest.class,UserAddingEpisodesTest.class
+
+JPA error
+A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
+
+play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:629)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: No datasource configured
+	... 6 more
+20 Mrz 2012 00:22:16,758 ERROR ~ 
+
+@69mcppcb3
+Internal Server Error (500) for request GET /@tests?select=EpisodeTrackingTest.class,UserAddingEpisodesTest.class
+
+JPA error
+A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
+
+play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:618)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: No datasource configured
+	... 6 more
+20 Mrz 2012 00:22:18,194 ERROR ~ 
+
+@69mcppcb4
+Internal Server Error (500) for request GET /@tests?select=EpisodeTrackingTest.class,UserAddingEpisodesTest.class
+
+JPA error
+A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
+
+play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:618)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: No datasource configured
+	... 6 more
+20 Mrz 2012 00:24:11,994 INFO  ~ Connected to jdbc:mysql://localhost/wherewasi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:24:12,995 ERROR ~ Unsuccessful: create table Episode (id bigint not null auto_increment, episodeNumber integer not null, seasonNumber integer not null, series_id bigint not null, primary key (id), unique (seasonNumber, episodeNumber, series_id)) ENGINE=InnoDB DEFAULT CHARSET=utf8
+20 Mrz 2012 00:24:12,995 ERROR ~ Table 'episode' already exists
+20 Mrz 2012 00:24:12,997 ERROR ~ Unsuccessful: create table Series (id bigint not null auto_increment, name varchar(255), serviceSeriesId varchar(255), primary key (id), unique (serviceSeriesId)) ENGINE=InnoDB DEFAULT CHARSET=utf8
+20 Mrz 2012 00:24:12,997 ERROR ~ Table 'series' already exists
+20 Mrz 2012 00:24:13,592 ERROR ~ Unsuccessful: alter table Episode add index FK72A55DB97F8467E (series_id), add constraint FK72A55DB97F8467E foreign key (series_id) references Series (id)
+20 Mrz 2012 00:24:13,592 ERROR ~ Duplicate key name 'FK72A55DB97F8467E'
+20 Mrz 2012 00:24:14,667 INFO  ~ Application 'wherewasi' is now started !
+20 Mrz 2012 00:24:17,419 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:24:17,478 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:24:17,498 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:24:17,524 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:24:17,562 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:24:17,590 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:24:17,594 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:24:17,596 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 00:24:17,597 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:24:17,611 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:24:17,615 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:24:17,632 DEBUG ~ INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)
+20 Mrz 2012 00:24:17,634 DEBUG ~ tracked episode
+20 Mrz 2012 00:24:17,635 DEBUG ~ select wwiuser0_.id as id1_0_, wwiuser0_.email as email1_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:24:17,637 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:24:17,642 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:24:17,659 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:24:17,661 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:24:17,664 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:24:17,667 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS5_1_2_, episodes0_.EPISODES_ID as EPISODES6_2_, episode1_.id as id0_0_, episode1_.episodeNumber as episodeN2_0_0_, episode1_.seasonNumber as seasonNu3_0_0_, episode1_.series_id as series4_0_0_, series2_.id as id2_1_, series2_.name as name2_1_, series2_.serviceSeriesId as serviceS3_2_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:24:17,673 DEBUG ~ DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?
+20 Mrz 2012 00:24:17,674 DEBUG ~ select wwiuser0_.id as id1_0_, wwiuser0_.email as email1_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:24:17,676 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:24:17,678 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:24:17,682 DEBUG ~ select episode0_.id as id0_, episode0_.episodeNumber as episodeN2_0_, episode0_.seasonNumber as seasonNu3_0_, episode0_.series_id as series4_0_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:24:17,684 DEBUG ~ finished tack and untrack test
+20 Mrz 2012 00:24:17,893 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:24:17,914 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:24:17,920 DEBUG ~ select wwiuser0_.id as id1_, wwiuser0_.email as email1_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:24:17,922 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:24:17,925 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS1_1_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id2_0_, series1_.name as name2_0_, series1_.serviceSeriesId as serviceS3_2_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+20 Mrz 2012 00:24:17,930 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:24:17,932 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:24:17,937 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS5_1_2_, episodes0_.EPISODES_ID as EPISODES6_2_, episode1_.id as id0_0_, episode1_.episodeNumber as episodeN2_0_0_, episode1_.seasonNumber as seasonNu3_0_0_, episode1_.series_id as series4_0_0_, series2_.id as id2_1_, series2_.name as name2_1_, series2_.serviceSeriesId as serviceS3_2_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:24:17,947 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:24:17,951 DEBUG ~ insert into WWIUSER_SERIES (WWIUSERS_ID, SERIES_ID) values (?, ?)
+20 Mrz 2012 00:24:17,954 DEBUG ~ select series0_.id as id2_, series0_.name as name2_, series0_.serviceSeriesId as serviceS3_2_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:24:17,956 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:24:17,961 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=?
+20 Mrz 2012 00:24:17,963 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:24:17,963 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:26:01,127 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:26:01,132 WARN  ~ SQL Error: 1146, SQLState: 42S02
+20 Mrz 2012 00:26:01,132 ERROR ~ Table 'wherewasi.wwiuser' doesn't exist
+20 Mrz 2012 00:26:01,156 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:26:01,157 WARN  ~ SQL Error: 1146, SQLState: 42S02
+20 Mrz 2012 00:26:01,158 ERROR ~ Table 'wherewasi.wwiuser' doesn't exist
+20 Mrz 2012 00:26:57,856 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:26:57,858 WARN  ~ SQL Error: 1146, SQLState: 42S02
+20 Mrz 2012 00:26:57,859 ERROR ~ Table 'wherewasi.wwiuser' doesn't exist
+20 Mrz 2012 00:26:57,878 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:26:57,881 WARN  ~ SQL Error: 1146, SQLState: 42S02
+20 Mrz 2012 00:26:57,881 ERROR ~ Table 'wherewasi.wwiuser' doesn't exist
+20 Mrz 2012 00:28:31,605 ERROR ~ Cannot connected to the database : Unknown database 'wherewasi'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'wherewasi'
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:931)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4031)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1296)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2338)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2371)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2163)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:378)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:90)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:618)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+20 Mrz 2012 00:28:31,635 ERROR ~ 
+
+@69mcppcb5
+Internal Server Error (500) for request GET /@tests?select=EpisodeTrackingTest.class,UserAddingEpisodesTest.class
+
+Database error
+A database error occured : Cannot connected to the database, Unknown database 'wherewasi'
+
+play.exceptions.DatabaseException: Cannot connected to the database, Unknown database 'wherewasi'
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:142)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:618)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'wherewasi'
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:931)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4031)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1296)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2338)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2371)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2163)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:378)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:90)
+	... 5 more
+20 Mrz 2012 00:28:34,025 ERROR ~ Cannot connected to the database : Unknown database 'wherewasi'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'wherewasi'
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:931)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4031)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1296)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2338)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2371)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2163)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:378)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:90)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:618)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+20 Mrz 2012 00:28:34,055 ERROR ~ 
+
+@69mcppcb6
+Internal Server Error (500) for request GET /@tests?select=EpisodeTrackingTest.class,UserAddingEpisodesTest.class
+
+Database error
+A database error occured : Cannot connected to the database, Unknown database 'wherewasi'
+
+play.exceptions.DatabaseException: Cannot connected to the database, Unknown database 'wherewasi'
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:142)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:618)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'wherewasi'
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:931)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:4031)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1296)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2338)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2371)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2163)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:378)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:185)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:90)
+	... 5 more
+20 Mrz 2012 00:28:45,692 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:28:48,991 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:28:49,010 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:28:49,019 DEBUG ~ select wwiuser0_.id as id11_, wwiuser0_.email as email11_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:28:49,025 DEBUG ~ select series0_.id as id12_, series0_.name as name12_, series0_.serviceSeriesId as serviceS3_12_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:28:49,050 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:28:49,066 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:28:49,073 DEBUG ~ select wwiuser0_.id as id11_, wwiuser0_.email as email11_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:28:49,075 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 00:28:49,075 DEBUG ~ select series0_.id as id12_, series0_.name as name12_, series0_.serviceSeriesId as serviceS3_12_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:28:49,084 DEBUG ~ select episode0_.id as id10_, episode0_.episodeNumber as episodeN2_10_, episode0_.seasonNumber as seasonNu3_10_, episode0_.series_id as series4_10_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:28:49,086 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:28:49,090 DEBUG ~ INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)
+20 Mrz 2012 00:28:49,091 DEBUG ~ tracked episode
+20 Mrz 2012 00:28:49,092 DEBUG ~ select wwiuser0_.id as id11_0_, wwiuser0_.email as email11_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:28:49,094 DEBUG ~ select series0_.id as id12_, series0_.name as name12_, series0_.serviceSeriesId as serviceS3_12_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:28:49,098 DEBUG ~ select wwiuser0_.id as id11_, wwiuser0_.email as email11_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:28:49,106 DEBUG ~ select episode0_.id as id10_, episode0_.episodeNumber as episodeN2_10_, episode0_.seasonNumber as seasonNu3_10_, episode0_.series_id as series4_10_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:28:49,108 DEBUG ~ select series0_.id as id12_, series0_.name as name12_, series0_.serviceSeriesId as serviceS3_12_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:28:49,110 DEBUG ~ select episode0_.id as id10_, episode0_.episodeNumber as episodeN2_10_, episode0_.seasonNumber as seasonNu3_10_, episode0_.series_id as series4_10_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:28:49,112 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS5_11_2_, episodes0_.EPISODES_ID as EPISODES6_2_, episode1_.id as id10_0_, episode1_.episodeNumber as episodeN2_10_0_, episode1_.seasonNumber as seasonNu3_10_0_, episode1_.series_id as series4_10_0_, series2_.id as id12_1_, series2_.name as name12_1_, series2_.serviceSeriesId as serviceS3_12_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:28:49,115 DEBUG ~ DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?
+20 Mrz 2012 00:28:49,117 DEBUG ~ select wwiuser0_.id as id11_0_, wwiuser0_.email as email11_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:28:49,119 DEBUG ~ select series0_.id as id12_, series0_.name as name12_, series0_.serviceSeriesId as serviceS3_12_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:28:49,121 DEBUG ~ select wwiuser0_.id as id11_, wwiuser0_.email as email11_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:28:49,122 DEBUG ~ select episode0_.id as id10_, episode0_.episodeNumber as episodeN2_10_, episode0_.seasonNumber as seasonNu3_10_, episode0_.series_id as series4_10_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:28:49,124 DEBUG ~ finished tack and untrack test
+20 Mrz 2012 00:28:49,238 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:28:49,253 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:28:49,261 DEBUG ~ select wwiuser0_.id as id11_, wwiuser0_.email as email11_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:28:49,270 DEBUG ~ select series0_.id as id12_, series0_.name as name12_, series0_.serviceSeriesId as serviceS3_12_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:28:49,288 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS1_11_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id12_0_, series1_.name as name12_0_, series1_.serviceSeriesId as serviceS3_12_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+20 Mrz 2012 00:28:49,301 DEBUG ~ select series0_.id as id12_, series0_.name as name12_, series0_.serviceSeriesId as serviceS3_12_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:28:49,322 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:28:49,346 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS5_11_2_, episodes0_.EPISODES_ID as EPISODES6_2_, episode1_.id as id10_0_, episode1_.episodeNumber as episodeN2_10_0_, episode1_.seasonNumber as seasonNu3_10_0_, episode1_.series_id as series4_10_0_, series2_.id as id12_1_, series2_.name as name12_1_, series2_.serviceSeriesId as serviceS3_12_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:28:49,352 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:28:49,354 DEBUG ~ insert into WWIUSER_SERIES (WWIUSERS_ID, SERIES_ID) values (?, ?)
+20 Mrz 2012 00:28:49,356 DEBUG ~ select series0_.id as id12_, series0_.name as name12_, series0_.serviceSeriesId as serviceS3_12_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:28:49,360 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:28:49,366 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=?
+20 Mrz 2012 00:28:49,368 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:28:49,368 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:33:50,020 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:33:51,355 ERROR ~ Unsuccessful: create table Episode (id bigint not null auto_increment, episodeNumber integer not null, seasonNumber integer not null, series_id bigint, primary key (id), unique (seasonNumber, episodeNumber, series_id)) ENGINE=InnoDB DEFAULT CHARSET=utf8
+20 Mrz 2012 00:33:51,355 ERROR ~ Table 'episode' already exists
+20 Mrz 2012 00:33:51,358 ERROR ~ Unsuccessful: create table Series (id bigint not null auto_increment, name varchar(255), serviceSeriesId varchar(255), primary key (id), unique (serviceSeriesId)) ENGINE=InnoDB DEFAULT CHARSET=utf8
+20 Mrz 2012 00:33:51,358 ERROR ~ Table 'series' already exists
+20 Mrz 2012 00:33:51,712 ERROR ~ Unsuccessful: alter table Episode add index FK72A55DB97F8467E (series_id), add constraint FK72A55DB97F8467E foreign key (series_id) references Series (id)
+20 Mrz 2012 00:33:51,712 ERROR ~ Duplicate key name 'FK72A55DB97F8467E'
+20 Mrz 2012 00:33:52,682 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:33:52,696 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:33:52,703 DEBUG ~ select wwiuser0_.id as id21_, wwiuser0_.email as email21_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:33:52,707 DEBUG ~ select series0_.id as id22_, series0_.name as name22_, series0_.serviceSeriesId as serviceS3_22_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:33:52,731 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:33:52,742 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:33:52,747 DEBUG ~ select wwiuser0_.id as id21_, wwiuser0_.email as email21_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:33:52,749 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 00:33:52,749 DEBUG ~ select series0_.id as id22_, series0_.name as name22_, series0_.serviceSeriesId as serviceS3_22_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:33:52,756 DEBUG ~ select episode0_.id as id20_, episode0_.episodeNumber as episodeN2_20_, episode0_.seasonNumber as seasonNu3_20_, episode0_.series_id as series4_20_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:33:52,757 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:33:52,760 DEBUG ~ INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)
+20 Mrz 2012 00:33:52,761 DEBUG ~ tracked episode
+20 Mrz 2012 00:33:52,761 DEBUG ~ select wwiuser0_.id as id21_0_, wwiuser0_.email as email21_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:33:52,762 DEBUG ~ select series0_.id as id22_, series0_.name as name22_, series0_.serviceSeriesId as serviceS3_22_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:33:52,766 DEBUG ~ select wwiuser0_.id as id21_, wwiuser0_.email as email21_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:33:52,773 DEBUG ~ select episode0_.id as id20_, episode0_.episodeNumber as episodeN2_20_, episode0_.seasonNumber as seasonNu3_20_, episode0_.series_id as series4_20_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:33:52,776 DEBUG ~ select series0_.id as id22_, series0_.name as name22_, series0_.serviceSeriesId as serviceS3_22_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:33:52,778 DEBUG ~ select episode0_.id as id20_, episode0_.episodeNumber as episodeN2_20_, episode0_.seasonNumber as seasonNu3_20_, episode0_.series_id as series4_20_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:33:52,780 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS5_21_2_, episodes0_.EPISODES_ID as EPISODES6_2_, episode1_.id as id20_0_, episode1_.episodeNumber as episodeN2_20_0_, episode1_.seasonNumber as seasonNu3_20_0_, episode1_.series_id as series4_20_0_, series2_.id as id22_1_, series2_.name as name22_1_, series2_.serviceSeriesId as serviceS3_22_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id left outer join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:33:52,783 DEBUG ~ DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?
+20 Mrz 2012 00:33:52,784 DEBUG ~ select wwiuser0_.id as id21_0_, wwiuser0_.email as email21_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:33:52,787 DEBUG ~ select series0_.id as id22_, series0_.name as name22_, series0_.serviceSeriesId as serviceS3_22_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:33:52,788 DEBUG ~ select wwiuser0_.id as id21_, wwiuser0_.email as email21_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:33:52,789 DEBUG ~ select episode0_.id as id20_, episode0_.episodeNumber as episodeN2_20_, episode0_.seasonNumber as seasonNu3_20_, episode0_.series_id as series4_20_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:33:52,791 DEBUG ~ finished tack and untrack test
+20 Mrz 2012 00:33:52,898 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:33:52,909 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:33:52,914 DEBUG ~ select wwiuser0_.id as id21_, wwiuser0_.email as email21_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:33:52,916 DEBUG ~ select series0_.id as id22_, series0_.name as name22_, series0_.serviceSeriesId as serviceS3_22_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:33:52,918 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS1_21_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id22_0_, series1_.name as name22_0_, series1_.serviceSeriesId as serviceS3_22_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+20 Mrz 2012 00:33:52,919 DEBUG ~ select series0_.id as id22_, series0_.name as name22_, series0_.serviceSeriesId as serviceS3_22_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:33:52,920 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:33:52,923 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS5_21_2_, episodes0_.EPISODES_ID as EPISODES6_2_, episode1_.id as id20_0_, episode1_.episodeNumber as episodeN2_20_0_, episode1_.seasonNumber as seasonNu3_20_0_, episode1_.series_id as series4_20_0_, series2_.id as id22_1_, series2_.name as name22_1_, series2_.serviceSeriesId as serviceS3_22_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id left outer join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:33:52,926 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:33:52,927 DEBUG ~ insert into WWIUSER_SERIES (WWIUSERS_ID, SERIES_ID) values (?, ?)
+20 Mrz 2012 00:33:52,929 DEBUG ~ select series0_.id as id22_, series0_.name as name22_, series0_.serviceSeriesId as serviceS3_22_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:33:52,931 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:33:52,937 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=?
+20 Mrz 2012 00:33:52,939 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:33:52,939 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:34:32,881 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:34:32,883 WARN  ~ SQL Error: 1146, SQLState: 42S02
+20 Mrz 2012 00:34:32,883 ERROR ~ Table 'wwi.wwiuser' doesn't exist
+20 Mrz 2012 00:34:32,898 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:34:32,900 WARN  ~ SQL Error: 1146, SQLState: 42S02
+20 Mrz 2012 00:34:32,900 ERROR ~ Table 'wwi.wwiuser' doesn't exist
+20 Mrz 2012 00:35:16,760 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:35:20,540 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:35:20,557 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:35:20,565 DEBUG ~ select wwiuser0_.id as id30_, wwiuser0_.email as email30_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:35:20,571 DEBUG ~ select series0_.id as id31_, series0_.name as name31_, series0_.serviceSeriesId as serviceS3_31_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:35:20,598 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:35:20,609 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:35:20,612 DEBUG ~ select wwiuser0_.id as id30_, wwiuser0_.email as email30_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:35:20,614 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 00:35:20,615 DEBUG ~ select series0_.id as id31_, series0_.name as name31_, series0_.serviceSeriesId as serviceS3_31_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:35:20,622 DEBUG ~ select episode0_.id as id29_, episode0_.episodeNumber as episodeN2_29_, episode0_.seasonNumber as seasonNu3_29_, episode0_.series_id as series4_29_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:35:20,623 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:35:20,627 DEBUG ~ INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)
+20 Mrz 2012 00:35:20,628 DEBUG ~ tracked episode
+20 Mrz 2012 00:35:20,629 DEBUG ~ select wwiuser0_.id as id30_0_, wwiuser0_.email as email30_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:35:20,630 DEBUG ~ select series0_.id as id31_, series0_.name as name31_, series0_.serviceSeriesId as serviceS3_31_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:35:20,633 DEBUG ~ select wwiuser0_.id as id30_, wwiuser0_.email as email30_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:35:20,639 DEBUG ~ select episode0_.id as id29_, episode0_.episodeNumber as episodeN2_29_, episode0_.seasonNumber as seasonNu3_29_, episode0_.series_id as series4_29_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:35:20,642 DEBUG ~ select series0_.id as id31_, series0_.name as name31_, series0_.serviceSeriesId as serviceS3_31_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:35:20,643 DEBUG ~ select episode0_.id as id29_, episode0_.episodeNumber as episodeN2_29_, episode0_.seasonNumber as seasonNu3_29_, episode0_.series_id as series4_29_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:35:20,644 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS5_30_2_, episodes0_.EPISODES_ID as EPISODES6_2_, episode1_.id as id29_0_, episode1_.episodeNumber as episodeN2_29_0_, episode1_.seasonNumber as seasonNu3_29_0_, episode1_.series_id as series4_29_0_, series2_.id as id31_1_, series2_.name as name31_1_, series2_.serviceSeriesId as serviceS3_31_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:35:20,647 DEBUG ~ DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?
+20 Mrz 2012 00:35:20,648 DEBUG ~ select wwiuser0_.id as id30_0_, wwiuser0_.email as email30_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:35:20,650 DEBUG ~ select series0_.id as id31_, series0_.name as name31_, series0_.serviceSeriesId as serviceS3_31_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:35:20,651 DEBUG ~ select wwiuser0_.id as id30_, wwiuser0_.email as email30_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:35:20,652 DEBUG ~ select episode0_.id as id29_, episode0_.episodeNumber as episodeN2_29_, episode0_.seasonNumber as seasonNu3_29_, episode0_.series_id as series4_29_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:35:20,653 DEBUG ~ finished tack and untrack test
+20 Mrz 2012 00:35:20,744 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:35:20,755 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:35:20,760 DEBUG ~ select wwiuser0_.id as id30_, wwiuser0_.email as email30_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:35:20,762 DEBUG ~ select series0_.id as id31_, series0_.name as name31_, series0_.serviceSeriesId as serviceS3_31_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:35:20,764 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS1_30_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id31_0_, series1_.name as name31_0_, series1_.serviceSeriesId as serviceS3_31_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+20 Mrz 2012 00:35:20,766 DEBUG ~ select series0_.id as id31_, series0_.name as name31_, series0_.serviceSeriesId as serviceS3_31_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:35:20,768 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:35:20,771 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS5_30_2_, episodes0_.EPISODES_ID as EPISODES6_2_, episode1_.id as id29_0_, episode1_.episodeNumber as episodeN2_29_0_, episode1_.seasonNumber as seasonNu3_29_0_, episode1_.series_id as series4_29_0_, series2_.id as id31_1_, series2_.name as name31_1_, series2_.serviceSeriesId as serviceS3_31_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:35:20,774 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:35:20,775 DEBUG ~ insert into WWIUSER_SERIES (WWIUSERS_ID, SERIES_ID) values (?, ?)
+20 Mrz 2012 00:35:20,778 DEBUG ~ select series0_.id as id31_, series0_.name as name31_, series0_.serviceSeriesId as serviceS3_31_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:35:20,780 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:35:20,787 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=?
+20 Mrz 2012 00:35:20,788 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:35:20,788 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:37:24,985 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:37:25,050 ERROR ~ 
+
+@69mcppcb7
+Internal Server Error (500) for request GET /@tests?select=EpisodeTrackingTest.class,UserAddingEpisodesTest.class
+
+JPA error
+A JPA error occurred (Unable to build EntityManagerFactory): @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:242)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:629)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1581)
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:796)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:707)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:3977)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3931)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1368)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1345)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1477)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1096)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:900)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:240)
+	... 5 more
+20 Mrz 2012 00:37:26,338 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:37:26,396 ERROR ~ 
+
+@69mcppcb8
+Internal Server Error (500) for request GET /@tests?select=EpisodeTrackingTest.class,UserAddingEpisodesTest.class
+
+JPA error
+A JPA error occurred (Unable to build EntityManagerFactory): @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:242)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:629)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1581)
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:796)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:707)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:3977)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3931)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1368)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1345)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1477)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1096)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:900)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:240)
+	... 5 more
+20 Mrz 2012 00:37:27,245 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:37:27,314 ERROR ~ 
+
+@69mcppcb9
+Internal Server Error (500) for request GET /@tests?select=EpisodeTrackingTest.class,UserAddingEpisodesTest.class
+
+JPA error
+A JPA error occurred (Unable to build EntityManagerFactory): @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:242)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:629)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1581)
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:796)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:707)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:3977)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3931)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1368)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1345)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1477)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1096)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:900)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:240)
+	... 5 more
+20 Mrz 2012 00:38:55,055 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:38:55,118 ERROR ~ 
+
+@69mcppcba
+Internal Server Error (500) for request GET /@tests?select=EpisodeTrackingTest.class,UserAddingEpisodesTest.class
+
+JPA error
+A JPA error occurred (Unable to build EntityManagerFactory): @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:242)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:629)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1581)
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:796)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:707)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:3977)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3931)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1368)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1345)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1477)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1096)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:900)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:240)
+	... 5 more
+20 Mrz 2012 00:38:55,994 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:38:56,038 ERROR ~ 
+
+@69mcppcbb
+Internal Server Error (500) for request GET /@tests?select=EpisodeTrackingTest.class,UserAddingEpisodesTest.class
+
+JPA error
+A JPA error occurred (Unable to build EntityManagerFactory): @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:242)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:629)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1581)
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:796)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:707)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:3977)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3931)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1368)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1345)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1477)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1096)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:900)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:240)
+	... 5 more
+20 Mrz 2012 00:38:57,753 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:38:57,802 ERROR ~ 
+
+@69mcppcbc
+Internal Server Error (500) for request GET /@tests?select=EpisodeTrackingTest.class,UserAddingEpisodesTest.class
+
+JPA error
+A JPA error occurred (Unable to build EntityManagerFactory): @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:242)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:480)
+	at play.Play.start(Play.java:515)
+	at play.Play.detectChanges(Play.java:629)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: models.WWIUserEpisode.episode
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1581)
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:796)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:707)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:3977)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3931)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1368)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1345)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1477)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1096)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:900)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:240)
+	... 5 more
+20 Mrz 2012 00:39:07,562 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:39:10,902 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:39:10,923 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:39:10,930 DEBUG ~ select wwiuser0_.id as id63_, wwiuser0_.email as email63_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:39:10,935 DEBUG ~ select series0_.id as id64_, series0_.name as name64_, series0_.serviceSeriesId as serviceS3_64_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:39:10,956 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:39:10,965 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:39:10,969 DEBUG ~ select wwiuser0_.id as id63_, wwiuser0_.email as email63_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:39:10,970 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 00:39:10,971 DEBUG ~ select series0_.id as id64_, series0_.name as name64_, series0_.serviceSeriesId as serviceS3_64_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:39:10,976 DEBUG ~ select episode0_.id as id62_, episode0_.episodeNumber as episodeN2_62_, episode0_.seasonNumber as seasonNu3_62_, episode0_.series_id as series4_62_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:39:10,978 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:39:10,981 DEBUG ~ INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)
+20 Mrz 2012 00:39:10,981 DEBUG ~ tracked episode
+20 Mrz 2012 00:39:10,982 DEBUG ~ select wwiuser0_.id as id63_0_, wwiuser0_.email as email63_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:39:10,983 DEBUG ~ select series0_.id as id64_, series0_.name as name64_, series0_.serviceSeriesId as serviceS3_64_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:39:10,987 DEBUG ~ select wwiuser0_.id as id63_, wwiuser0_.email as email63_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:39:10,994 DEBUG ~ select episode0_.id as id62_, episode0_.episodeNumber as episodeN2_62_, episode0_.seasonNumber as seasonNu3_62_, episode0_.series_id as series4_62_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:39:10,997 DEBUG ~ select series0_.id as id64_, series0_.name as name64_, series0_.serviceSeriesId as serviceS3_64_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:39:10,998 DEBUG ~ select episode0_.id as id62_, episode0_.episodeNumber as episodeN2_62_, episode0_.seasonNumber as seasonNu3_62_, episode0_.series_id as series4_62_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:39:10,999 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS4_63_2_, episodes0_.EPISODES_ID as EPISODES5_2_, episode1_.id as id62_0_, episode1_.episodeNumber as episodeN2_62_0_, episode1_.seasonNumber as seasonNu3_62_0_, episode1_.series_id as series4_62_0_, series2_.id as id64_1_, series2_.name as name64_1_, series2_.serviceSeriesId as serviceS3_64_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:39:11,001 DEBUG ~ DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?
+20 Mrz 2012 00:39:11,002 DEBUG ~ select wwiuser0_.id as id63_0_, wwiuser0_.email as email63_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:39:11,004 DEBUG ~ select series0_.id as id64_, series0_.name as name64_, series0_.serviceSeriesId as serviceS3_64_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:39:11,005 DEBUG ~ select wwiuser0_.id as id63_, wwiuser0_.email as email63_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:39:11,006 DEBUG ~ select episode0_.id as id62_, episode0_.episodeNumber as episodeN2_62_, episode0_.seasonNumber as seasonNu3_62_, episode0_.series_id as series4_62_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:39:11,008 DEBUG ~ finished tack and untrack test
+20 Mrz 2012 00:39:11,104 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:39:11,115 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:39:11,120 DEBUG ~ select wwiuser0_.id as id63_, wwiuser0_.email as email63_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:39:11,121 DEBUG ~ select series0_.id as id64_, series0_.name as name64_, series0_.serviceSeriesId as serviceS3_64_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:39:11,123 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS1_63_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id64_0_, series1_.name as name64_0_, series1_.serviceSeriesId as serviceS3_64_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+20 Mrz 2012 00:39:11,125 DEBUG ~ select series0_.id as id64_, series0_.name as name64_, series0_.serviceSeriesId as serviceS3_64_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:39:11,126 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:39:11,128 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS4_63_2_, episodes0_.EPISODES_ID as EPISODES5_2_, episode1_.id as id62_0_, episode1_.episodeNumber as episodeN2_62_0_, episode1_.seasonNumber as seasonNu3_62_0_, episode1_.series_id as series4_62_0_, series2_.id as id64_1_, series2_.name as name64_1_, series2_.serviceSeriesId as serviceS3_64_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:39:11,131 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:39:11,132 DEBUG ~ insert into WWIUSER_SERIES (WWIUSERS_ID, SERIES_ID) values (?, ?)
+20 Mrz 2012 00:39:11,135 DEBUG ~ select series0_.id as id64_, series0_.name as name64_, series0_.serviceSeriesId as serviceS3_64_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:39:11,136 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:39:11,141 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=?
+20 Mrz 2012 00:39:11,143 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:39:11,143 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:42:03,928 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:42:06,998 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:42:07,015 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:42:07,022 DEBUG ~ select wwiuser0_.id as id72_, wwiuser0_.email as email72_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:42:07,026 DEBUG ~ select series0_.id as id73_, series0_.name as name73_, series0_.serviceSeriesId as serviceS3_73_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:42:07,049 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:42:07,056 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:42:07,058 DEBUG ~ select wwiuser0_.id as id72_, wwiuser0_.email as email72_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:42:07,060 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 00:42:07,060 DEBUG ~ select series0_.id as id73_, series0_.name as name73_, series0_.serviceSeriesId as serviceS3_73_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:42:07,064 DEBUG ~ select episode0_.id as id71_, episode0_.episodeNumber as episodeN2_71_, episode0_.seasonNumber as seasonNu3_71_, episode0_.series_id as series4_71_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:42:07,065 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:42:07,068 DEBUG ~ INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)
+20 Mrz 2012 00:42:07,069 DEBUG ~ tracked episode
+20 Mrz 2012 00:42:07,069 DEBUG ~ select wwiuser0_.id as id72_0_, wwiuser0_.email as email72_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:42:07,070 DEBUG ~ select series0_.id as id73_, series0_.name as name73_, series0_.serviceSeriesId as serviceS3_73_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:42:07,073 DEBUG ~ select wwiuser0_.id as id72_, wwiuser0_.email as email72_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:42:07,077 DEBUG ~ select episode0_.id as id71_, episode0_.episodeNumber as episodeN2_71_, episode0_.seasonNumber as seasonNu3_71_, episode0_.series_id as series4_71_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:42:07,079 DEBUG ~ select series0_.id as id73_, series0_.name as name73_, series0_.serviceSeriesId as serviceS3_73_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:42:07,080 DEBUG ~ select episode0_.id as id71_, episode0_.episodeNumber as episodeN2_71_, episode0_.seasonNumber as seasonNu3_71_, episode0_.series_id as series4_71_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:42:07,081 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_72_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id71_0_, episode1_.episodeNumber as episodeN2_71_0_, episode1_.seasonNumber as seasonNu3_71_0_, episode1_.series_id as series4_71_0_, series2_.id as id73_1_, series2_.name as name73_1_, series2_.serviceSeriesId as serviceS3_73_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:42:07,082 DEBUG ~ DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?
+20 Mrz 2012 00:42:07,083 DEBUG ~ select wwiuser0_.id as id72_0_, wwiuser0_.email as email72_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:42:07,084 DEBUG ~ select series0_.id as id73_, series0_.name as name73_, series0_.serviceSeriesId as serviceS3_73_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:42:07,085 DEBUG ~ select wwiuser0_.id as id72_, wwiuser0_.email as email72_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:42:07,086 DEBUG ~ select episode0_.id as id71_, episode0_.episodeNumber as episodeN2_71_, episode0_.seasonNumber as seasonNu3_71_, episode0_.series_id as series4_71_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:42:07,088 DEBUG ~ finished tack and untrack test
+20 Mrz 2012 00:42:07,190 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:42:07,203 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:42:07,208 DEBUG ~ select wwiuser0_.id as id72_, wwiuser0_.email as email72_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:42:07,210 DEBUG ~ select series0_.id as id73_, series0_.name as name73_, series0_.serviceSeriesId as serviceS3_73_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:42:07,213 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS1_72_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id73_0_, series1_.name as name73_0_, series1_.serviceSeriesId as serviceS3_73_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+20 Mrz 2012 00:42:07,215 DEBUG ~ select series0_.id as id73_, series0_.name as name73_, series0_.serviceSeriesId as serviceS3_73_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:42:07,218 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:42:07,221 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_72_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id71_0_, episode1_.episodeNumber as episodeN2_71_0_, episode1_.seasonNumber as seasonNu3_71_0_, episode1_.series_id as series4_71_0_, series2_.id as id73_1_, series2_.name as name73_1_, series2_.serviceSeriesId as serviceS3_73_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:42:07,224 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:42:07,226 DEBUG ~ insert into WWIUSER_SERIES (WWIUSERS_ID, SERIES_ID) values (?, ?)
+20 Mrz 2012 00:42:07,231 DEBUG ~ select series0_.id as id73_, series0_.name as name73_, series0_.serviceSeriesId as serviceS3_73_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:42:07,234 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:42:07,239 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=?
+20 Mrz 2012 00:42:07,240 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:42:07,241 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:50:04,832 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:50:09,144 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:50:09,153 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:50:09,159 DEBUG ~ select wwiuser0_.id as id82_, wwiuser0_.email as email82_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:50:09,164 DEBUG ~ select series0_.id as id83_, series0_.name as name83_, series0_.serviceSeriesId as serviceS3_83_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:50:09,184 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:50:09,190 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:50:09,193 DEBUG ~ select wwiuser0_.id as id82_, wwiuser0_.email as email82_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:50:09,195 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 00:50:09,196 DEBUG ~ select series0_.id as id83_, series0_.name as name83_, series0_.serviceSeriesId as serviceS3_83_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:50:09,201 DEBUG ~ select episode0_.id as id81_, episode0_.episodeNumber as episodeN2_81_, episode0_.seasonNumber as seasonNu3_81_, episode0_.series_id as series4_81_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:50:09,203 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:50:09,206 DEBUG ~ INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)
+20 Mrz 2012 00:50:09,207 DEBUG ~ tracked episode
+20 Mrz 2012 00:50:09,207 DEBUG ~ select wwiuser0_.id as id82_0_, wwiuser0_.email as email82_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:50:09,209 DEBUG ~ select series0_.id as id83_, series0_.name as name83_, series0_.serviceSeriesId as serviceS3_83_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:50:09,212 DEBUG ~ select wwiuser0_.id as id82_, wwiuser0_.email as email82_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:50:09,218 DEBUG ~ select episode0_.id as id81_, episode0_.episodeNumber as episodeN2_81_, episode0_.seasonNumber as seasonNu3_81_, episode0_.series_id as series4_81_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:50:09,221 DEBUG ~ select series0_.id as id83_, series0_.name as name83_, series0_.serviceSeriesId as serviceS3_83_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:50:09,222 DEBUG ~ select episode0_.id as id81_, episode0_.episodeNumber as episodeN2_81_, episode0_.seasonNumber as seasonNu3_81_, episode0_.series_id as series4_81_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:50:09,223 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_82_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id81_0_, episode1_.episodeNumber as episodeN2_81_0_, episode1_.seasonNumber as seasonNu3_81_0_, episode1_.series_id as series4_81_0_, series2_.id as id83_1_, series2_.name as name83_1_, series2_.serviceSeriesId as serviceS3_83_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:50:09,225 DEBUG ~ DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?
+20 Mrz 2012 00:50:09,226 DEBUG ~ select wwiuser0_.id as id82_0_, wwiuser0_.email as email82_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:50:09,228 DEBUG ~ select series0_.id as id83_, series0_.name as name83_, series0_.serviceSeriesId as serviceS3_83_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:50:09,229 DEBUG ~ select wwiuser0_.id as id82_, wwiuser0_.email as email82_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:50:09,230 DEBUG ~ select episode0_.id as id81_, episode0_.episodeNumber as episodeN2_81_, episode0_.seasonNumber as seasonNu3_81_, episode0_.series_id as series4_81_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:50:09,231 DEBUG ~ finished tack and untrack test
+20 Mrz 2012 00:50:09,305 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:50:09,313 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:50:09,315 DEBUG ~ select wwiuser0_.id as id82_, wwiuser0_.email as email82_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:50:09,317 DEBUG ~ select series0_.id as id83_, series0_.name as name83_, series0_.serviceSeriesId as serviceS3_83_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:50:09,318 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_82_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id83_0_, series1_.name as name83_0_, series1_.serviceSeriesId as serviceS3_83_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+20 Mrz 2012 00:50:09,320 DEBUG ~ select series0_.id as id83_, series0_.name as name83_, series0_.serviceSeriesId as serviceS3_83_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:50:09,321 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:50:09,323 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_82_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id81_0_, episode1_.episodeNumber as episodeN2_81_0_, episode1_.seasonNumber as seasonNu3_81_0_, episode1_.series_id as series4_81_0_, series2_.id as id83_1_, series2_.name as name83_1_, series2_.serviceSeriesId as serviceS3_83_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:50:09,325 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:50:09,326 DEBUG ~ insert into WWIUSER_SERIES (WWIUSERS_ID, SERIES_ID) values (?, ?)
+20 Mrz 2012 00:50:09,327 DEBUG ~ select series0_.id as id83_, series0_.name as name83_, series0_.serviceSeriesId as serviceS3_83_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:50:09,329 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:50:09,332 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=?
+20 Mrz 2012 00:50:09,333 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:50:09,333 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:58:50,992 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 00:58:53,074 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:58:53,087 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:58:53,093 DEBUG ~ select wwiuser0_.id as id92_, wwiuser0_.email as email92_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:58:53,098 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:58:53,122 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:58:53,131 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:58:53,134 DEBUG ~ select wwiuser0_.id as id92_, wwiuser0_.email as email92_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:58:53,136 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 00:58:53,136 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:58:53,142 DEBUG ~ select episode0_.id as id91_, episode0_.episodeNumber as episodeN2_91_, episode0_.seasonNumber as seasonNu3_91_, episode0_.series_id as series4_91_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:58:53,144 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:58:53,146 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID) values (?, ?)
+20 Mrz 2012 00:58:53,148 DEBUG ~ tracked episode
+20 Mrz 2012 00:58:53,149 DEBUG ~ select wwiuser0_.id as id92_0_, wwiuser0_.email as email92_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:58:53,150 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:58:53,154 DEBUG ~ select wwiuser0_.id as id92_, wwiuser0_.email as email92_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:58:53,159 DEBUG ~ select episode0_.id as id91_, episode0_.episodeNumber as episodeN2_91_, episode0_.seasonNumber as seasonNu3_91_, episode0_.series_id as series4_91_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:58:53,161 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:58:53,162 DEBUG ~ select episode0_.id as id91_, episode0_.episodeNumber as episodeN2_91_, episode0_.seasonNumber as seasonNu3_91_, episode0_.series_id as series4_91_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:58:53,163 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_92_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id91_0_, episode1_.episodeNumber as episodeN2_91_0_, episode1_.seasonNumber as seasonNu3_91_0_, episode1_.series_id as series4_91_0_, series2_.id as id93_1_, series2_.name as name93_1_, series2_.serviceSeriesId as serviceS3_93_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:59:22,394 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:59:22,410 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:59:22,414 DEBUG ~ select wwiuser0_.id as id92_, wwiuser0_.email as email92_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:59:22,416 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:59:22,435 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:59:22,440 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:59:22,442 DEBUG ~ select wwiuser0_.id as id92_, wwiuser0_.email as email92_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:59:22,443 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 00:59:22,443 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:59:22,445 DEBUG ~ select episode0_.id as id91_, episode0_.episodeNumber as episodeN2_91_, episode0_.seasonNumber as seasonNu3_91_, episode0_.series_id as series4_91_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:59:22,446 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:59:22,447 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID) values (?, ?)
+20 Mrz 2012 00:59:22,449 DEBUG ~ tracked episode
+20 Mrz 2012 00:59:22,449 DEBUG ~ select wwiuser0_.id as id92_0_, wwiuser0_.email as email92_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:59:22,450 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:59:22,451 DEBUG ~ select wwiuser0_.id as id92_, wwiuser0_.email as email92_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:59:22,452 DEBUG ~ select episode0_.id as id91_, episode0_.episodeNumber as episodeN2_91_, episode0_.seasonNumber as seasonNu3_91_, episode0_.series_id as series4_91_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:59:22,453 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:59:22,454 DEBUG ~ select episode0_.id as id91_, episode0_.episodeNumber as episodeN2_91_, episode0_.seasonNumber as seasonNu3_91_, episode0_.series_id as series4_91_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 00:59:22,455 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_92_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id91_0_, episode1_.episodeNumber as episodeN2_91_0_, episode1_.seasonNumber as seasonNu3_91_0_, episode1_.series_id as series4_91_0_, series2_.id as id93_1_, series2_.name as name93_1_, series2_.serviceSeriesId as serviceS3_93_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:59:22,484 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=? and EPISODES_ID=?
+20 Mrz 2012 00:59:22,485 DEBUG ~ select wwiuser0_.id as id92_0_, wwiuser0_.email as email92_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+20 Mrz 2012 00:59:22,486 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:59:22,487 DEBUG ~ select wwiuser0_.id as id92_, wwiuser0_.email as email92_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 00:59:22,488 DEBUG ~ select episode0_.id as id91_, episode0_.episodeNumber as episodeN2_91_, episode0_.seasonNumber as seasonNu3_91_, episode0_.series_id as series4_91_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 00:59:22,489 DEBUG ~ finished tack and untrack test
+20 Mrz 2012 00:59:22,547 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 00:59:22,553 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 00:59:22,556 DEBUG ~ select wwiuser0_.id as id92_, wwiuser0_.email as email92_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 00:59:22,559 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:59:22,560 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_92_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id93_0_, series1_.name as name93_0_, series1_.serviceSeriesId as serviceS3_93_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+20 Mrz 2012 00:59:22,562 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:59:22,563 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:59:22,565 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_92_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id91_0_, episode1_.episodeNumber as episodeN2_91_0_, episode1_.seasonNumber as seasonNu3_91_0_, episode1_.series_id as series4_91_0_, series2_.id as id93_1_, series2_.name as name93_1_, series2_.serviceSeriesId as serviceS3_93_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 00:59:22,567 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:59:22,568 DEBUG ~ insert into WWIUSER_SERIES (WWIUSERS_ID, SERIES_ID) values (?, ?)
+20 Mrz 2012 00:59:22,569 DEBUG ~ select series0_.id as id93_, series0_.name as name93_, series0_.serviceSeriesId as serviceS3_93_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 00:59:22,571 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 00:59:22,575 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=?
+20 Mrz 2012 00:59:22,576 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 00:59:22,576 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 01:00:03,149 INFO  ~ Connected to jdbc:mysql://localhost/wwi?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+20 Mrz 2012 01:00:06,423 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 01:00:06,436 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 01:00:06,442 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 01:00:06,447 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:06,467 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 01:00:06,473 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 01:00:06,476 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 01:00:06,478 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 01:00:06,478 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:06,484 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 01:00:06,486 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 01:00:06,488 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID) values (?, ?)
+20 Mrz 2012 01:00:06,490 DEBUG ~ tracked episode
+20 Mrz 2012 01:00:06,491 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:06,495 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 01:00:06,501 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 01:00:06,503 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:06,505 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 01:00:06,507 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_102_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id101_0_, episode1_.episodeNumber as episodeN2_101_0_, episode1_.seasonNumber as seasonNu3_101_0_, episode1_.series_id as series4_101_0_, series2_.id as id103_1_, series2_.name as name103_1_, series2_.serviceSeriesId as serviceS3_103_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 01:00:06,511 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=? and EPISODES_ID=?
+20 Mrz 2012 01:00:06,512 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:06,514 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 01:00:06,515 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 01:00:06,516 DEBUG ~ finished tack and untrack test
+20 Mrz 2012 01:00:06,609 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 01:00:06,616 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 01:00:06,619 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 01:00:06,621 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:06,623 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_102_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id103_0_, series1_.name as name103_0_, series1_.serviceSeriesId as serviceS3_103_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+20 Mrz 2012 01:00:06,625 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:06,626 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 01:00:06,628 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_102_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id101_0_, episode1_.episodeNumber as episodeN2_101_0_, episode1_.seasonNumber as seasonNu3_101_0_, episode1_.series_id as series4_101_0_, series2_.id as id103_1_, series2_.name as name103_1_, series2_.serviceSeriesId as serviceS3_103_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 01:00:06,629 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 01:00:06,630 DEBUG ~ insert into WWIUSER_SERIES (WWIUSERS_ID, SERIES_ID) values (?, ?)
+20 Mrz 2012 01:00:06,632 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:06,633 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 01:00:06,635 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=?
+20 Mrz 2012 01:00:06,636 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 01:00:06,636 DEBUG ~ insert into WWIUSER_EPISODE (WWIUSERS_ID, EPISODES_ID) values (?, ?)
+20 Mrz 2012 01:00:53,952 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 01:00:53,961 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 01:00:53,965 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 01:00:53,967 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:53,988 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 01:00:53,996 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 01:00:53,999 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 01:00:54,000 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 01:00:54,001 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:54,003 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 01:00:54,004 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 01:00:54,005 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID) values (?, ?)
+20 Mrz 2012 01:00:54,007 DEBUG ~ tracked episode
+20 Mrz 2012 01:00:54,008 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:54,009 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 01:00:54,010 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 01:00:54,012 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:54,013 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 01:00:54,014 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_102_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id101_0_, episode1_.episodeNumber as episodeN2_101_0_, episode1_.seasonNumber as seasonNu3_101_0_, episode1_.series_id as series4_101_0_, series2_.id as id103_1_, series2_.name as name103_1_, series2_.serviceSeriesId as serviceS3_103_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 01:00:54,015 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=? and EPISODES_ID=?
+20 Mrz 2012 01:00:54,016 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:00:54,018 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 01:00:54,019 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 01:00:54,020 DEBUG ~ finished tack and untrack test
+20 Mrz 2012 01:04:07,405 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 01:04:07,414 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 01:04:07,417 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 01:04:07,419 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:04:07,439 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 01:04:07,447 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 01:04:07,450 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 01:04:07,452 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 01:04:07,452 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:04:07,453 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 01:04:07,454 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 01:04:07,456 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID) values (?, ?)
+20 Mrz 2012 01:04:07,458 DEBUG ~ tracked episode
+20 Mrz 2012 01:04:07,459 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:04:07,460 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 01:04:07,461 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 01:04:07,463 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:04:07,465 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 01:04:07,466 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_102_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id101_0_, episode1_.episodeNumber as episodeN2_101_0_, episode1_.seasonNumber as seasonNu3_101_0_, episode1_.series_id as series4_101_0_, series2_.id as id103_1_, series2_.name as name103_1_, series2_.serviceSeriesId as serviceS3_103_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 01:04:07,468 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=? and EPISODES_ID=?
+20 Mrz 2012 01:04:07,469 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:04:07,471 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 01:04:07,472 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 01:04:07,473 DEBUG ~ finished tack and untrack test
+20 Mrz 2012 01:05:27,692 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 01:05:27,701 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 01:05:27,706 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 01:05:27,709 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:05:27,727 DEBUG ~ insert into WWIUser (email) values (?)
+20 Mrz 2012 01:05:27,736 DEBUG ~ insert into Series (name, serviceSeriesId) values (?, ?)
+20 Mrz 2012 01:05:27,738 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+20 Mrz 2012 01:05:27,740 DEBUG ~ starting tack and untrack test
+20 Mrz 2012 01:05:27,740 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:05:27,742 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 01:05:27,743 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id) values (?, ?, ?)
+20 Mrz 2012 01:05:27,745 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID) values (?, ?)
+20 Mrz 2012 01:05:27,749 DEBUG ~ tracked episode
+20 Mrz 2012 01:05:27,749 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:05:27,751 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 01:05:27,752 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 01:05:27,754 DEBUG ~ starting to untrack
+20 Mrz 2012 01:05:27,754 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:05:27,756 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+20 Mrz 2012 01:05:27,757 DEBUG ~ select episodes0_.WWIUSERS_ID as WWIUSERS3_102_2_, episodes0_.EPISODES_ID as EPISODES2_2_, episode1_.id as id101_0_, episode1_.episodeNumber as episodeN2_101_0_, episode1_.seasonNumber as seasonNu3_101_0_, episode1_.series_id as series4_101_0_, series2_.id as id103_1_, series2_.name as name103_1_, series2_.serviceSeriesId as serviceS3_103_1_ from WWIUSER_EPISODE episodes0_ inner join Episode episode1_ on episodes0_.EPISODES_ID=episode1_.id inner join Series series2_ on episode1_.series_id=series2_.id where episodes0_.WWIUSERS_ID=?
+20 Mrz 2012 01:05:27,759 DEBUG ~ delete from WWIUSER_EPISODE where WWIUSERS_ID=? and EPISODES_ID=?
+20 Mrz 2012 01:05:27,760 DEBUG ~ untracked episode
+20 Mrz 2012 01:05:27,761 DEBUG ~ select series0_.id as id103_, series0_.name as name103_, series0_.serviceSeriesId as serviceS3_103_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+20 Mrz 2012 01:05:27,762 DEBUG ~ select wwiuser0_.id as id102_, wwiuser0_.email as email102_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+20 Mrz 2012 01:05:27,764 DEBUG ~ select episode0_.id as id101_, episode0_.episodeNumber as episodeN2_101_, episode0_.seasonNumber as seasonNu3_101_, episode0_.series_id as series4_101_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+20 Mrz 2012 01:05:27,765 DEBUG ~ finished tack and untrack test

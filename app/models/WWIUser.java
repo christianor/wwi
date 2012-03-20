@@ -87,17 +87,30 @@ public class WWIUser extends Model {
             episode.series = series;
             episode.save();
 
-            JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
-
+            // JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+            WWIUserEpisode userEpisode = new WWIUserEpisode();
+            userEpisode.user = user;
+            userEpisode.episode = episode;
+            
+            userEpisode.save();
+            
             return true;
         }
 
         if (user.episodes.contains(episode)) {
-            JPA.em().createNativeQuery("DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+            // JPA.em().createNativeQuery("DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+            JPA.em().createQuery("DELETE FROM WWIUSER_EPISODE WHERE user = ? AND episode = ?").setParameter(1, user).setParameter(2, episode).executeUpdate();
+
             return false;
 
         } else {
-            JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+            // JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
+            WWIUserEpisode userEpisode = new WWIUserEpisode();
+            userEpisode.user = user;
+            userEpisode.episode = episode;
+            
+            userEpisode.save();
+            
             return true;
         }
 
