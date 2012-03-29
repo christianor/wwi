@@ -65,7 +65,6 @@ public class WWIUser extends Model {
      * Track a Episode
      * returns true if the episode is tracked, returns false if it is untracked
      * 
-     * TODO: Remove the native query and replace it with a JPA query
      * TODO: Check if the WWIUser has added this series to "his series", if not, add it
      */
     public static boolean trackEpisode(long userid, String seriesId, int seasonNumber, int episodeNumber) throws SeriesNotFoundException {
@@ -87,7 +86,6 @@ public class WWIUser extends Model {
             episode.series = series;
             episode.save();
 
-            // JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
             WWIUserEpisode userEpisode = new WWIUserEpisode();
             userEpisode.user = user;
             userEpisode.episode = episode;
@@ -98,13 +96,11 @@ public class WWIUser extends Model {
         }
 
         if (user.episodes.contains(episode)) {
-            // JPA.em().createNativeQuery("DELETE FROM WWIUser_Episode WHERE wwiusers_id = ? AND episodes_id = ?").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
             JPA.em().createQuery("DELETE FROM WWIUSER_EPISODE WHERE user = ? AND episode = ?").setParameter(1, user).setParameter(2, episode).executeUpdate();
 
             return false;
 
         } else {
-            // JPA.em().createNativeQuery("INSERT INTO WWIUser_Episode (wwiusers_id, episodes_id) VALUES (?, ?)").setParameter(1, user.id).setParameter(2, episode.id).executeUpdate();
             WWIUserEpisode userEpisode = new WWIUserEpisode();
             userEpisode.user = user;
             userEpisode.episode = episode;

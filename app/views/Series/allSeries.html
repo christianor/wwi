@@ -1,8 +1,8 @@
 #{extends 'main.html' /}
 #{set nav:'tvseries' /}
-<h1>Search for Tv-Series</h1>
 <form class="form-search">
-    <input class="search-query" id="search-field" type="text"/> <button type="submit" class="btn btn-primary" id="search-btn">Search <i class="icon-white icon-search"></i></button>
+    <input placeholder="type in series name..."  class="span3" id="search-field" type="text"/> 
+    <button type="submit" class="btn btn-primary" id="search-btn">Search <i class="icon-white icon-search"></i></button>
 </form>
 <img id="loadImg" src="@{'public/img/loading.gif'}" style="display:none"/>
 <div id="search-result"> 

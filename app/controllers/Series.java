@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import models.Episode;
 import models.WWIUser;
+import models.WWIUserSeries;
 import play.db.jpa.JPA;
 import play.mvc.Controller;
 import play.mvc.With;
@@ -112,8 +113,12 @@ public class Series extends Controller {
         if (u.series.contains(s)) {
             renderJSON("{\"response\": \"nothing\"}");
         } else {
-            u.series.add(s);
-            u.save();
+            WWIUserSeries userSeries = new WWIUserSeries();
+            userSeries.series = s;
+            userSeries.user = u;
+            
+            userSeries.save();
+            
             renderJSON("{\"response\": \"added\"}");
         }
 

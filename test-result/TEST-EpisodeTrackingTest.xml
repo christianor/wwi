@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<testsuite failures="0" time="0.145" errors="0" skipped="0" tests="2" name="EpisodeTrackingTest">
-  <testcase classname="EpisodeTrackingTest" name="testIllegalEpisodeTracking" time="0.09">
+<testsuite failures="0" time="0.442" errors="0" skipped="0" tests="2" name="EpisodeTrackingTest">
+  <testcase classname="EpisodeTrackingTest" name="testIllegalEpisodeTracking" time="0.198">
       </testcase>
-  <testcase classname="EpisodeTrackingTest" name="testTrackAndUntrack" time="0.055">
+  <testcase classname="EpisodeTrackingTest" name="testTrackAndUntrack" time="0.244">
       </testcase>
 </testsuite>
