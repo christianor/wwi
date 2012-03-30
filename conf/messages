@@ -1,3 +1,6 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
+beta=Currently in open beta. Your data may be corrupted during the beta period.
+welcome=We all know the problem. You want to watch an episode of a tv series that you haven't watched for a while and you can't remember at which episode you've stopped. This service will help you to track the tv episodes you've watched already.
+headline=Where Was I?

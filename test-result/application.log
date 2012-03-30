@@ -1,271 +1,46 @@
-30 Mrz 2012 00:07:26,320 INFO  ~ Starting /Users/Christian/Dropbox/repositories/wherewasi
-30 Mrz 2012 00:07:27,054 WARN  ~ You're running Play! in DEV mode
-30 Mrz 2012 00:07:27,156 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-30 Mrz 2012 00:07:31,644 INFO  ~ Connected to jdbc:postgresql://localhost/wwi
-30 Mrz 2012 00:07:32,725 INFO  ~ Application 'wherewasi' is now started !
-30 Mrz 2012 00:07:33,072 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
-30 Mrz 2012 00:07:40,574 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:07:41,333 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:07:41,352 DEBUG ~ insert into Series (name, serviceSeriesId, id) values (?, ?, ?)
-30 Mrz 2012 00:07:41,358 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:07:41,452 ERROR ~ 
+30 Mrz 2012 22:04:09,189 INFO  ~ Starting /Users/Christian/Dropbox/repositories/wherewasi
+30 Mrz 2012 22:04:10,580 WARN  ~ You're running Play! in DEV mode
+30 Mrz 2012 22:04:10,858 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+30 Mrz 2012 22:04:23,704 INFO  ~ Connected to jdbc:postgresql://localhost/wwi
+30 Mrz 2012 22:04:25,755 INFO  ~ Application 'wherewasi' is now started !
+30 Mrz 2012 22:04:56,123 ERROR ~ 
 
-@69p79083l
-Internal Server Error (500) for request POST /series/my/add/79349/d148be3735358bf401ec817539113cc541871ebf
+@69pdpp14d
+Internal Server Error (500) for request GET /
 
-Execution exception (In /app/controllers/Series.java around line 113)
-NullPointerException occured : Try to read series on null object models.WWIUser (controllers.Series.addToMySeries, line 113)
+Template execution error (In /app/views/Application/index.html around line 6)
+Execution error occured in template /app/views/Application/index.html. Exception raised was NullPointerException : You are trying to resolve a message with an expression that is resolved to null - have you forgotten quotes around the message-key?.
 
-play.exceptions.JavaExecutionException: Try to read series on null object models.WWIUser (controllers.Series.addToMySeries, line 113)
-	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
-	at Invocation.HTTP Request(Play!)
-Caused by: java.lang.NullPointerException: Try to read series on null object models.WWIUser (controllers.Series.addToMySeries, line 113)
-	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:205)
-	at controllers.Series.addToMySeries(Series.java:113)
+play.exceptions.TemplateExecutionException: You are trying to resolve a message with an expression that is resolved to null - have you forgotten quotes around the message-key?
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Application.index(Application.java:7)
 	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
 	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
 	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
 	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
 	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
-	... 1 more
-30 Mrz 2012 00:08:45,746 INFO  ~ Number of application's worked threads is 8
-30 Mrz 2012 00:08:47,336 DEBUG ~ select wwiuser0_.id as id2_, wwiuser0_.email as email2_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-30 Mrz 2012 00:08:47,338 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:08:47,340 DEBUG ~ insert into WWIUser (email, id) values (?, ?)
-30 Mrz 2012 00:08:47,353 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:08:47,388 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:08:49,552 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
-30 Mrz 2012 00:08:54,808 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:08:55,077 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:08:55,079 DEBUG ~ insert into Series (name, serviceSeriesId, id) values (?, ?, ?)
-30 Mrz 2012 00:08:55,081 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:08:55,082 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:08:55,084 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:08:55,085 DEBUG ~ insert into WWIUSER_SERIES (SERIES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:08:58,306 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:08:58,309 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:09:00,771 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:00,783 DEBUG ~ select wwiuser0_.id as id2_, wwiuser0_.email as email2_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
-30 Mrz 2012 00:09:00,792 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
-30 Mrz 2012 00:09:03,183 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,186 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,199 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,206 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,216 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,223 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,226 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,240 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,245 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,251 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,253 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,257 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,261 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,265 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,279 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,281 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,285 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,287 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,289 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,292 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,295 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,310 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,314 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,316 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,319 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,322 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,325 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,327 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,338 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,340 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,341 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,343 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,344 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,346 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,348 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,358 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,360 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,361 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,362 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,363 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,365 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,367 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,378 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,380 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,382 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,383 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,384 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,386 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,388 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,399 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,400 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,402 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,403 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,405 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,406 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,408 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,418 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,420 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,422 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,424 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,425 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,427 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,428 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,438 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,440 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,441 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,442 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,443 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,445 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,447 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,459 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,461 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,463 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,465 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,467 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,469 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,471 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,480 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,482 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,483 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,484 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,486 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,487 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,489 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,499 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,501 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,503 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,504 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,505 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,507 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,509 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,518 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,520 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,521 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,522 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,523 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,525 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,526 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,537 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,539 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,541 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,542 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,543 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,545 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,546 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,558 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,560 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,562 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,564 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,567 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,570 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,572 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,585 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,587 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,588 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,590 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,592 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,594 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,597 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,608 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,610 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,613 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,615 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,618 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,620 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,622 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,633 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,635 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,637 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,638 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,640 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,642 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,644 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,657 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,659 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,661 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,663 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,665 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,667 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,669 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,680 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,682 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,684 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,686 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,688 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,690 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,692 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,701 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,703 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,704 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,705 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,706 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,708 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,709 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:03,721 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:03,723 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:03,724 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:03,725 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,727 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:03,728 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:03,730 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:08,691 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:08,693 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:08,695 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:08,696 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:08,698 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:08,700 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:08,701 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:09:09,730 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:09:09,731 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:09:09,740 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
-30 Mrz 2012 00:09:09,741 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:09,743 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
-30 Mrz 2012 00:09:09,745 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 00:09:09,746 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
-30 Mrz 2012 00:15:47,220 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:15:47,222 DEBUG ~ select wwiuser0_.id as id2_, wwiuser0_.email as email2_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
-30 Mrz 2012 00:15:47,224 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
-30 Mrz 2012 00:15:58,126 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
-30 Mrz 2012 00:15:59,108 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:15:59,112 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:16:00,949 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
-30 Mrz 2012 00:16:08,006 DEBUG ~ select wwiuser0_.id as id2_, wwiuser0_.email as email2_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-30 Mrz 2012 00:16:08,019 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:16:08,025 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:16:29,400 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:16:29,458 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:16:33,772 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
-30 Mrz 2012 00:16:34,731 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:16:34,734 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:16:38,810 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
-30 Mrz 2012 00:18:33,908 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
-30 Mrz 2012 00:19:04,349 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
-30 Mrz 2012 00:19:10,115 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:19:10,118 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:19:33,878 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:19:33,880 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:20:20,606 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:20:20,610 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:20:47,448 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:20:47,451 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:20:49,990 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:20:49,991 DEBUG ~ select wwiuser0_.id as id2_, wwiuser0_.email as email2_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
-30 Mrz 2012 00:20:49,992 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
-30 Mrz 2012 00:20:53,165 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
-30 Mrz 2012 00:22:06,526 DEBUG ~ select wwiuser0_.id as id2_, wwiuser0_.email as email2_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-30 Mrz 2012 00:22:06,539 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:22:06,541 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:22:08,722 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:22:08,724 DEBUG ~ select wwiuser0_.id as id2_, wwiuser0_.email as email2_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
-30 Mrz 2012 00:22:08,725 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
-30 Mrz 2012 00:22:28,438 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:22:28,440 DEBUG ~ select wwiuser0_.id as id2_, wwiuser0_.email as email2_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
-30 Mrz 2012 00:22:28,442 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
-30 Mrz 2012 00:22:41,822 DEBUG ~ select wwiuser0_.id as id2_0_, wwiuser0_.email as email2_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 00:22:41,824 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_2_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id3_0_, series1_.name as name3_0_, series1_.serviceSeriesId as serviceS3_3_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
-30 Mrz 2012 00:22:46,504 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:22:46,506 DEBUG ~ select wwiuser0_.id as id2_, wwiuser0_.email as email2_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
-30 Mrz 2012 00:22:46,508 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
-30 Mrz 2012 00:23:25,847 DEBUG ~ select series0_.id as id3_, series0_.name as name3_, series0_.serviceSeriesId as serviceS3_3_ from Series series0_ where series0_.serviceSeriesId=? limit ?
-30 Mrz 2012 00:23:25,848 DEBUG ~ select wwiuser0_.id as id2_, wwiuser0_.email as email2_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
-30 Mrz 2012 00:23:25,849 DEBUG ~ select episode0_.id as id1_, episode0_.episodeNumber as episodeN2_1_, episode0_.seasonNumber as seasonNu3_1_, episode0_.series_id as series4_1_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: You are trying to resolve a message with an expression that is resolved to null - have you forgotten quotes around the message-key?
+	at play.templates.GroovyTemplate$ExecutableTemplate.__getMessage(GroovyTemplate.java:421)
+	at /app/views/Application/index.html.(line:6)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	... 13 more
+30 Mrz 2012 22:07:04,588 WARN  ~ Messages file missing for locale en
+30 Mrz 2012 22:08:48,129 WARN  ~ Messages file missing for locale en
+30 Mrz 2012 22:10:15,518 WARN  ~ Messages file missing for locale en
+30 Mrz 2012 22:10:39,246 WARN  ~ Messages file missing for locale en
+30 Mrz 2012 22:10:59,011 WARN  ~ Messages file missing for locale en
+30 Mrz 2012 22:13:40,933 WARN  ~ Messages file missing for locale en
+30 Mrz 2012 22:14:43,867 INFO  ~ Number of application's worked threads is 8
+30 Mrz 2012 22:14:45,478 DEBUG ~ select wwiuser0_.id as id12_, wwiuser0_.email as email12_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+30 Mrz 2012 22:14:45,518 DEBUG ~ select nextval ('hibernate_sequence')
+30 Mrz 2012 22:14:45,555 DEBUG ~ insert into WWIUser (email, id) values (?, ?)
+30 Mrz 2012 22:14:45,648 DEBUG ~ select wwiuser0_.id as id12_0_, wwiuser0_.email as email12_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
+30 Mrz 2012 22:14:45,730 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_12_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id13_0_, series1_.name as name13_0_, series1_.serviceSeriesId as serviceS3_13_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
