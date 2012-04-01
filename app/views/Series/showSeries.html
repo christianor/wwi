@@ -141,9 +141,6 @@
     <div class="modal-body">
         <div id="disqus_thread"></div>
     </div>
-    <div class="modal-footer">
-        
-    </div>
 </div>
 
 <script type="text/javascript">
@@ -152,6 +149,8 @@
     function initDisqus(identifier) {
         /* * * DON'T EDIT BELOW THIS LINE * * */
         disqus_identifier = identifier;
+        
+        $("script[src=http://' + disqus_shortname + '.disqus.com/embed.js']").remove();
         
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
