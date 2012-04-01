@@ -152,8 +152,10 @@
         if (location.href.indexOf('#') >= 0) { 
             location.href = location.href.substr(0, location.href.indexOf('#')) + '#';
         }
+        else
+            location.href += '#';
         
-        location.href = location.href + "#!/discussion_" + hashbang;
+        location.href = location.href + "!/discussion_" + hashbang;
         
         if (!initialized) {
             
