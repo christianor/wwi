@@ -29,12 +29,6 @@
         $("#discussionModal").modal({ backdrop: false });
         $("#discussionModal").modal("hide");
         
-        $('#discussionModal').on('hidden', function () {
-            if (location.href.indexOf('#') >= 0) { 
-                location.href = location.href.substr(0, location.href.indexOf('#')) + '#';
-            }
-        });
-        
         $.get("http://series-ortiz.rhcloud.com/series/" + seriesId + "?s=thetvdb",
         function(series){
             $("#loadingMessage").fadeOut("fast", function()
@@ -155,7 +149,11 @@
     
     function initDisqus(identifier, hashbang) {
         
-        location.href =( location.href.indexOf("#", 0) >= 0) ? location.href + "!/discussion_" + hashbang : location.href + "#!/discussion_" + hashbang;
+        if (location.href.indexOf('#') >= 0) { 
+            location.href = location.href.substr(0, location.href.indexOf('#')) + '#';
+        }
+        
+        location.href = location.href + "#!/discussion_" + hashbang;
         
         if (!initialized) {
             

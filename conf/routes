@@ -18,7 +18,7 @@ POST    /series/my/add/{seriesId}/{authenticityToken}                           
 GET     /series/all.html                                                            Series.allSeries
 GET     /series/my/all.html                                                         Series.userSeries
 GET     /series/my/{serviceSeriesId}.html                                           Series.showSeries
-GET     /series/my/{serviceSeriesId}.html*                                         Series.showSeries
+GET     /series/my/{serviceSeriesId}.html*                                          Series.showSeries
 GET     /series/login.html                                                          Series.userSeries
 GET     /                                                                           Application.index
 
