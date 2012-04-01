@@ -146,8 +146,8 @@
     var disqus_shortname = 'wwi-wherewasi';
     
     function initDisqus(identifier) {
-        disqus_identifier = identifier;
-        disqus_title = identifier;
+        window.disqus_identifier = identifier;
+        window.disqus_title = identifier;
         //disqus_developer = 1;
         
         $('script[src="http://' + disqus_shortname + '.disqus.com/embed.js"]').remove();
