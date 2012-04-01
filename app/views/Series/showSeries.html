@@ -29,6 +29,12 @@
         $("#discussionModal").modal({ backdrop: false });
         $("#discussionModal").modal("hide");
         
+        $('#discussionModal').on('hidden', function () {
+            if (location.href.indexOf('#') >= 0) { 
+                location.href = location.href.substr(0, location.href.indexOf('#')) + '#';
+            }
+        });
+        
         $.get("http://series-ortiz.rhcloud.com/series/" + seriesId + "?s=thetvdb",
         function(series){
             $("#loadingMessage").fadeOut("fast", function()
@@ -67,10 +73,10 @@
                         }
                         
                         if (seen == true) {
-                            $("#seasontabs .tab-content .tab-pane[id=" + number + "] .episodes table tbody").append('<tr><td style="vertical-align: middle;"><a class="btn-track btn btn-success" data-loading-text="..." id="${ serviceSeriesId };' + number + ';' + episode.number + '" href="#"><i class="icon-eye-open icon-white"></i></a></td><td>' + episode.number + '</td><td>' + (episode.name == null ? "Currently no name available." : episode.name) + '</td><td>' + (episode.description == null ? "Currently no description available." : episode.description) + '</td><td><a class="btn discussEpisode" data-identifier="'+ series.name + ' ' + series.fromYear + ' Season ' + number + ' Episode ' + episode.number + ' ' + episode.name +'" href="#discussion" >Discuss</a></td></tr>');
+                            $("#seasontabs .tab-content .tab-pane[id=" + number + "] .episodes table tbody").append('<tr><td style="vertical-align: middle;"><a class="btn-track btn btn-success" data-loading-text="..." id="${ serviceSeriesId };' + number + ';' + episode.number + '" href="#"><i class="icon-eye-open icon-white"></i></a></td><td>' + episode.number + '</td><td>' + (episode.name == null ? "Currently no name available." : episode.name) + '</td><td>' + (episode.description == null ? "Currently no description available." : episode.description) + '</td><td><a class="btn discussEpisode" data-hashbang="' + number + episode.number + '" data-identifier="'+ series.name + ' ' + series.fromYear + ' Season ' + number + ' Episode ' + episode.number + ' ' + episode.name +'" href="#discussion" >Discuss</a></td></tr>');
                         }
                         else
-                            $("#seasontabs .tab-content .tab-pane[id=" + number + "] .episodes table tbody").append('<tr><td style="vertical-align: middle;"><a class="btn-track btn btn-danger" data-loading-text="..." id="${ serviceSeriesId };' + number + ';' + episode.number + '" href="#"><i class="icon-eye-close icon-white"></i></a></td><td>' + episode.number + '</td><td>' + (episode.name == null ? "Currently no name available." : episode.name) + '</td><td>' + (episode.description == null ? "Currently no description available." : episode.description) + '</td><td><a class="btn discussEpisode" data-identifier="'+ series.name + ' ' + series.fromYear + ' Season ' + number + ' Episode ' + episode.number + ' ' + episode.name +'" href="#discussion" >Discuss</a></td></tr>');
+                            $("#seasontabs .tab-content .tab-pane[id=" + number + "] .episodes table tbody").append('<tr><td style="vertical-align: middle;"><a class="btn-track btn btn-danger" data-loading-text="..." id="${ serviceSeriesId };' + number + ';' + episode.number + '" href="#"><i class="icon-eye-close icon-white"></i></a></td><td>' + episode.number + '</td><td>' + (episode.name == null ? "Currently no name available." : episode.name) + '</td><td>' + (episode.description == null ? "Currently no description available." : episode.description) + '</td><td><a class="btn discussEpisode" data-hashbang="' + number + episode.number + '" data-identifier="'+ series.name + ' ' + series.fromYear + ' Season ' + number + ' Episode ' + episode.number + ' ' + episode.name +'" href="#discussion" >Discuss</a></td></tr>');
                     }
 
                 }
@@ -123,6 +129,14 @@
             $(this).parent().parent().find('a[class="btn-track btn btn-success"]').click();
         });
         
+        $(".discussEpisode").live("click", function() {
+            $("#discussionModal").modal("show");
+            initDisqus($(this).attr("data-identifier"), $(this).attr("data-hashbang"));
+            
+            $("#discussionHeader").text($(this).attr("data-identifier"));
+            
+            return false;
+        });
     });     
 </script>
 
@@ -136,62 +150,37 @@
 </div>
 
 <script type="text/javascript">
-    // DISQUS vars.
     var disqus_shortname = 'wwi-wherewasi';
-    var disqus_identifier = '';
-    var disqus_url = '';
-
-    // Leave a comment/cancel.
-    $('.discussEpisode').live('click', function ()
-    {
-        $("#discussionModal").modal("show");
-         $("#discussionHeader").text($(this).attr("data-identifier"));
-        // Firefox? Bad firefox.
-        if ($.browser.mozilla && window.disqus_loaded)
-        {
-            return true;
-        }
-
-        // Init DISQUS.
-        disqus_identifier = $(this).attr('data-identifier');
-        disqus_url = $(this).attr('href');
-
-        // Load DISQUS script, if not already loaded.
-        if ($('div.disqus_thread').length == 0)
-        {
-            $.getScript('http://'+disqus_shortname+'.disqus.com/embed.js',
-            function ()
-            {
-                window.disqus_interval =
-                    setInterval('is_disqus_loaded("disqus_thread")',
-                200);
-            }
-        );
-        }
-        
-        return false;
+    var initialized = false;
     
-    });
-
-    // Hide/kill all open DISQUS forums.
-    $('.entry a.nocomment').click(function ()
-    {
-        $('div.comments').slideUp('normal',
-        function () { $(this).find('.disqus_thread').empty(); });
-        $('p.comment').slideDown();
-        return false;
-    });
-
-    function is_disqus_loaded (entry_id)
-    {
-        $entry = $('#'+entry_id);
-        if ($entry.find('div.disqus_thread .dsq-reply').length)
-        {
-            clearInterval(window.disqus_interval);
-            window.disqus_loaded = true;
-            $entry.find('div.comments').slideDown();
-            $entry.find('a.comment span').removeClass('loading');
-            $entry.find('p.comment').slideUp();
+    function initDisqus(identifier, hashbang) {
+        
+        location.href =( location.href.indexOf("#", 0) >= 0) ? location.href + "!/discussion_" + hashbang : location.href + "#!/discussion_" + hashbang;
+        
+        if (!initialized) {
+            
+            window.disqus_identifier = identifier;
+            window.disqus_title = identifier;
+            window.disqus_url = location.href;
+            //disqus_developer = 1;
+        
+            $('script[src="http://' + disqus_shortname + '.disqus.com/embed.js"]').remove();
+        
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })(); 
+        }
+        else {
+            DISQUS.reset({
+                reload: true,
+                config: function () {  
+                    this.page.identifier = identifier;
+                    this.page.title = identifier;
+                    this.page.url = location.href;
+                }
+            });
         }
     }
 </script>
