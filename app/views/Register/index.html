@@ -1,9 +1,12 @@
 #{extends 'main.html' /}
+#{ifErrors }
+<h3 class="alert alert-danger">Oops...</h3>
+#{/ifErrors }
 #{form @Register.save(), class: 'form-horizontal' }
 <fieldset>
     <legend>Create a new account</legend>
     <div class="control-group #{ifError 'email'} error #{/ifError}">
-        <label class="control-label">Your E-Mail Address</label>
+        <label class="control-label">Your email address</label>
         <div class="controls">
             <input type="text" value="${flash.email}" name="email" />
             #{ifError 'email'}
@@ -12,7 +15,7 @@
         </div>
     </div>
     <div class="control-group #{ifError 'repeatedEmail'} error #{/ifError}">
-        <label class="control-label">Repeat Your E-Mail Address</label>
+        <label class="control-label">Repeat your email address</label>
         <div class="controls">
             <input type="text" value="${flash.repeatedEmail}" name="repeatedEmail" />
             #{ifError 'repeatedEmail'}
@@ -21,7 +24,7 @@
         </div>
     </div>
     <div class="control-group #{ifError 'password'} error #{/ifError}">
-        <label class="control-label">Your Password</label>
+        <label class="control-label">Your password</label>
         <div class="controls">
             <input type="password" name="password" />
             #{ifError 'password'}
@@ -33,7 +36,7 @@
         </div>
     </div>
     <div class="control-group #{ifError 'repeatedPassword'} error #{/ifError}">
-        <label class="control-label">Repeat Your Password</label>
+        <label class="control-label">Repeat your password</label>
         <div class="controls">
             <input type="password" name="repeatedPassword" />
             #{ifError 'repeatedPassword'}

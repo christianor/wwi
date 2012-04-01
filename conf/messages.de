@@ -1,3 +1,5 @@
 beta=Offene Beta. Datenbestände können jederzeit aufgelöst werden.
 welcome=Wir alle kennen das Problem. Du willst eine Folge deiner Lieblingsserie anschauen, weißt allerdings nicht welche Folgen du bisher gesehen hast. Dieser Dienst soll dir Helfen die Übersicht über deine Serien und Folgen zu behalten.
 headline=Wo War Ich?
+
+validation.required = Cannot be blank

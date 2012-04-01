@@ -34,7 +34,8 @@ public class Register extends Controller {
             Validation.addError("repeatedPassword", "Passwords do not match");
         
         if (email == null ? repeatedEmail != null : !email.equals(repeatedEmail))
-            Validation.addError("repeatedEmail", "E-Mails do not match");
+            Validation.addError("repeatedEmail", "Emails do not match");
+        
         
         if (Validation.hasErrors()) {
             
