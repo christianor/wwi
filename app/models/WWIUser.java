@@ -6,6 +6,7 @@ package models;
 
 import exceptions.SeriesNotFoundException;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -13,7 +14,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import net.sf.oval.constraint.exclusion.Nullable;
 import play.data.validation.Required;
 import play.data.validation.Unique;
 import play.db.jpa.JPA;
@@ -56,7 +56,7 @@ public class WWIUser extends Model {
     })
     public List<Episode> episodes;
     
-    @OneToOne
+    @OneToOne(orphanRemoval=true)
     public WWIUserPassword password;
 
     public WWIUser() {
