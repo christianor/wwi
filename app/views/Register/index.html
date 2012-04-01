@@ -1,0 +1,48 @@
+#{extends 'main.html' /}
+#{form @Register.save(), class: 'form-horizontal' }
+<fieldset>
+    <legend>Create a new account</legend>
+    <div class="control-group #{ifError 'email'} error #{/ifError}">
+        <label class="control-label">Your E-Mail Address</label>
+        <div class="controls">
+            <input type="text" value="${flash.email}" name="email" />
+            #{ifError 'email'}
+                <span class="help-inline">#{error 'email' /}</span>
+            #{/ifError}
+        </div>
+    </div>
+    <div class="control-group #{ifError 'repeatedEmail'} error #{/ifError}">
+        <label class="control-label">Repeat Your E-Mail Address</label>
+        <div class="controls">
+            <input type="text" value="${flash.repeatedEmail}" name="repeatedEmail" />
+            #{ifError 'repeatedEmail'}
+                <span class="help-inline">#{error 'repeatedEmail' /}</span>
+            #{/ifError}
+        </div>
+    </div>
+    <div class="control-group #{ifError 'password'} error #{/ifError}">
+        <label class="control-label">Your Password</label>
+        <div class="controls">
+            <input type="password" name="password" />
+            #{ifError 'password'}
+                <span class="help-inline">#{error 'password' /}</span>
+            #{/ifError}
+            <div class="help-block">
+                At least 6 characters
+            </div>
+        </div>
+    </div>
+    <div class="control-group #{ifError 'repeatedPassword'} error #{/ifError}">
+        <label class="control-label">Repeat Your Password</label>
+        <div class="controls">
+            <input type="password" name="repeatedPassword" />
+            #{ifError 'repeatedPassword'}
+                <span class="help-inline">#{error 'repeatedPassword' /}</span>
+            #{/ifError}
+        </div>
+    </div>
+    <div class="form-actions">
+        <input type="submit" value="Register" class="btn btn-primary" />
+    </div>
+</fieldset>
+#{/form}

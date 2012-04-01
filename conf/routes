@@ -2,13 +2,17 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /logout               Secure.logout
-GET     /login                Secure.login
-*       /authenticate         Secure.authenticate
-GET     /                     Application.index
+GET     /logout                                 Secure.logout
+GET     /login                                  Secure.login
+*       /authenticate                           Secure.authenticate
+POST    /authenticate/traditional               Secure.authenticateTraditional
+GET     /register                               Register.index
+POST    /register/save                          Register.save
+GET     /register/activate/{secretKey}          Register.activate 
+GET     /                                       Application.index
 
-# Home page
-POST    /series/my/track/episode/{seriesId}/{seasonNumber}/{episodeNumber}/{authenticityToken}     Series.trackEpisode
+
+POST    /series/my/track/episode/{seriesId}/{seasonNumber}/{episodeNumber}/{authenticityToken}      Series.trackEpisode
 POST    /series/my/add/{seriesId}/{authenticityToken}                                               Series.addToMySeries
 
 GET     /series/all.html                                                            Series.allSeries

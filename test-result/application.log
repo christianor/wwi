@@ -1,46 +1,257 @@
-30 Mrz 2012 22:04:09,189 INFO  ~ Starting /Users/Christian/Dropbox/repositories/wherewasi
-30 Mrz 2012 22:04:10,580 WARN  ~ You're running Play! in DEV mode
-30 Mrz 2012 22:04:10,858 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-30 Mrz 2012 22:04:23,704 INFO  ~ Connected to jdbc:postgresql://localhost/wwi
-30 Mrz 2012 22:04:25,755 INFO  ~ Application 'wherewasi' is now started !
-30 Mrz 2012 22:04:56,123 ERROR ~ 
+01 Apr 2012 04:43:19,942 INFO  ~ Starting /Users/Christian/Dropbox/repositories/wherewasi
+01 Apr 2012 04:43:20,738 WARN  ~ You're running Play! in DEV mode
+01 Apr 2012 04:43:20,920 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+01 Apr 2012 04:43:26,798 INFO  ~ Connected to jdbc:postgresql://localhost/wwi
+01 Apr 2012 04:43:28,214 INFO  ~ Application 'wherewasi' is now started !
+01 Apr 2012 04:43:45,298 DEBUG ~ select wwiuser0_.id as id4_, wwiuser0_.email as email4_, wwiuser0_.password_id as password3_4_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+01 Apr 2012 04:43:45,527 INFO  ~ From Mock Mailer
+	New email received by
+	From: wherewasi@noreply.com
+	ReplyTo: wherewasi@noreply.com
+	To: "t@test.de" <t@test.de>
+	Subject: Where Was I Registration
+	text/plain; charset=us-ascii: Click the following link to activate your account: wwi.herokuapp.com/register/activate/5e531afb200a4fedb4a2d16cd3a9f924 
+	
 
-@69pdpp14d
-Internal Server Error (500) for request GET /
+01 Apr 2012 04:43:56,280 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:43:56,399 ERROR ~ 
 
-Template execution error (In /app/views/Application/index.html around line 6)
-Execution error occured in template /app/views/Application/index.html. Exception raised was NullPointerException : You are trying to resolve a message with an expression that is resolved to null - have you forgotten quotes around the message-key?.
+@69pn7aofa
+Internal Server Error (500) for request GET /register/activate/5e531afb200a4fedb4a2d16cd3a9f924
 
-play.exceptions.TemplateExecutionException: You are trying to resolve a message with an expression that is resolved to null - have you forgotten quotes around the message-key?
-	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
-	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
-	at play.templates.Template.render(Template.java:26)
-	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
-	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
-	at play.mvc.Controller.renderTemplate(Controller.java:660)
-	at play.mvc.Controller.renderTemplate(Controller.java:640)
-	at play.mvc.Controller.render(Controller.java:695)
-	at controllers.Application.index(Application.java:7)
+Execution exception (In /app/controllers/Register.java around line 91)
+IllegalStateException occured : org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+
+play.exceptions.JavaExecutionException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IllegalStateException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1211)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:798)
+	at play.db.jpa.JPABase._save(JPABase.java:35)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at controllers.Register.activate(Register.java:91)
 	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
 	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
 	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
 	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
 	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+Caused by: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+	at org.hibernate.engine.CascadingAction$9.noCascade(CascadingAction.java:387)
+	at org.hibernate.engine.Cascade.cascade(Cascade.java:172)
+	at org.hibernate.event.def.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:175)
+	at org.hibernate.event.def.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:166)
+	at org.hibernate.event.def.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:88)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1216)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:795)
+	... 9 more
+01 Apr 2012 04:44:44,105 DEBUG ~ select wwiuser0_.id as id16_, wwiuser0_.email as email16_, wwiuser0_.password_id as password3_16_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+01 Apr 2012 04:44:44,116 INFO  ~ From Mock Mailer
+	New email received by
+	From: wherewasi@noreply.com
+	ReplyTo: wherewasi@noreply.com
+	To: "t@test.de" <t@test.de>
+	Subject: Where Was I Registration
+	text/plain; charset=us-ascii: Click the following link to activate your account: wwi.herokuapp.com/register/activate/5e531afb200a4fedb4a2d16cd3a9f924 
+	
+
+01 Apr 2012 04:44:50,207 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:44:50,282 ERROR ~ 
+
+@69pn7aofb
+Internal Server Error (500) for request GET /register/activate/5e531afb200a4fedb4a2d16cd3a9f924
+
+Execution exception (In /app/controllers/Register.java around line 90)
+IllegalStateException occured : org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+
+play.exceptions.JavaExecutionException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
 	at Invocation.HTTP Request(Play!)
-Caused by: java.lang.NullPointerException: You are trying to resolve a message with an expression that is resolved to null - have you forgotten quotes around the message-key?
-	at play.templates.GroovyTemplate$ExecutableTemplate.__getMessage(GroovyTemplate.java:421)
-	at /app/views/Application/index.html.(line:6)
-	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
-	... 13 more
-30 Mrz 2012 22:07:04,588 WARN  ~ Messages file missing for locale en
-30 Mrz 2012 22:08:48,129 WARN  ~ Messages file missing for locale en
-30 Mrz 2012 22:10:15,518 WARN  ~ Messages file missing for locale en
-30 Mrz 2012 22:10:39,246 WARN  ~ Messages file missing for locale en
-30 Mrz 2012 22:10:59,011 WARN  ~ Messages file missing for locale en
-30 Mrz 2012 22:13:40,933 WARN  ~ Messages file missing for locale en
-30 Mrz 2012 22:14:43,867 INFO  ~ Number of application's worked threads is 8
-30 Mrz 2012 22:14:45,478 DEBUG ~ select wwiuser0_.id as id12_, wwiuser0_.email as email12_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
-30 Mrz 2012 22:14:45,518 DEBUG ~ select nextval ('hibernate_sequence')
-30 Mrz 2012 22:14:45,555 DEBUG ~ insert into WWIUser (email, id) values (?, ?)
-30 Mrz 2012 22:14:45,648 DEBUG ~ select wwiuser0_.id as id12_0_, wwiuser0_.email as email12_0_ from WWIUser wwiuser0_ where wwiuser0_.id=?
-30 Mrz 2012 22:14:45,730 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_12_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id13_0_, series1_.name as name13_0_, series1_.serviceSeriesId as serviceS3_13_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+Caused by: java.lang.IllegalStateException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1211)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:798)
+	at play.db.jpa.JPABase._save(JPABase.java:35)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at controllers.Register.activate(Register.java:90)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+Caused by: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+	at org.hibernate.engine.CascadingAction$9.noCascade(CascadingAction.java:387)
+	at org.hibernate.engine.Cascade.cascade(Cascade.java:172)
+	at org.hibernate.event.def.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:175)
+	at org.hibernate.event.def.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:166)
+	at org.hibernate.event.def.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:88)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1216)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:795)
+	... 9 more
+01 Apr 2012 04:45:26,102 DEBUG ~ select wwiuser0_.id as id16_, wwiuser0_.email as email16_, wwiuser0_.password_id as password3_16_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+01 Apr 2012 04:45:26,108 INFO  ~ From Mock Mailer
+	New email received by
+	From: wherewasi@noreply.com
+	ReplyTo: wherewasi@noreply.com
+	To: "t@test.de" <t@test.de>
+	Subject: Where Was I Registration
+	text/plain; charset=us-ascii: Click the following link to activate your account: wwi.herokuapp.com/register/activate/5e531afb200a4fedb4a2d16cd3a9f924 
+	
+
+01 Apr 2012 04:45:33,616 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:45:33,628 ERROR ~ 
+
+@69pn7aofc
+Internal Server Error (500) for request GET /register/activate/5e531afb200a4fedb4a2d16cd3a9f924
+
+Execution exception (In /app/controllers/Register.java around line 90)
+IllegalStateException occured : org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+
+play.exceptions.JavaExecutionException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IllegalStateException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1211)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:798)
+	at play.db.jpa.JPABase._save(JPABase.java:35)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at controllers.Register.activate(Register.java:90)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+Caused by: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.WWIUser.password -> models.WWIUserPassword
+	at org.hibernate.engine.CascadingAction$9.noCascade(CascadingAction.java:387)
+	at org.hibernate.engine.Cascade.cascade(Cascade.java:172)
+	at org.hibernate.event.def.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:175)
+	at org.hibernate.event.def.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:166)
+	at org.hibernate.event.def.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:88)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1216)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:795)
+	... 9 more
+01 Apr 2012 04:46:11,134 DEBUG ~ select wwiuser0_.id as id16_, wwiuser0_.email as email16_, wwiuser0_.password_id as password3_16_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+01 Apr 2012 04:46:11,139 INFO  ~ From Mock Mailer
+	New email received by
+	From: wherewasi@noreply.com
+	ReplyTo: wherewasi@noreply.com
+	To: "t@test.de" <t@test.de>
+	Subject: Where Was I Registration
+	text/plain; charset=us-ascii: Click the following link to activate your account: wwi.herokuapp.com/register/activate/5e531afb200a4fedb4a2d16cd3a9f924 
+	
+
+01 Apr 2012 04:46:18,558 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:46:18,566 DEBUG ~ insert into WWIUserPassword (passwordHash, id) values (?, ?)
+01 Apr 2012 04:46:18,571 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:46:18,574 DEBUG ~ insert into WWIUser (email, password_id, id) values (?, ?, ?)
+01 Apr 2012 04:47:33,628 DEBUG ~ select wwiuser0_.id as id16_, wwiuser0_.email as email16_, wwiuser0_.password_id as password3_16_ from WWIUser wwiuser0_ cross join WWIUserPassword wwiuserpas1_ where wwiuser0_.password_id=wwiuserpas1_.id and wwiuser0_.email=? and wwiuserpas1_.passwordHash=? limit ?
+01 Apr 2012 04:47:33,641 DEBUG ~ select wwiuserpas0_.id as id17_1_, wwiuserpas0_.passwordHash as password2_17_1_, wwiuser1_.id as id16_0_, wwiuser1_.email as email16_0_, wwiuser1_.password_id as password3_16_0_ from WWIUserPassword wwiuserpas0_ left outer join WWIUser wwiuser1_ on wwiuserpas0_.id=wwiuser1_.password_id where wwiuserpas0_.id=?
+01 Apr 2012 04:47:33,644 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.password_id=?
+01 Apr 2012 04:47:33,663 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:47:33,667 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.password_id=?
+01 Apr 2012 04:47:33,706 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_16_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id14_0_, series1_.name as name14_0_, series1_.serviceSeriesId as serviceS3_14_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+01 Apr 2012 04:47:36,322 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
+01 Apr 2012 04:47:37,948 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:47:37,950 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.password_id=?
+01 Apr 2012 04:47:37,953 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_16_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id14_0_, series1_.name as name14_0_, series1_.serviceSeriesId as serviceS3_14_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+01 Apr 2012 04:47:38,863 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
+01 Apr 2012 04:47:43,130 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+01 Apr 2012 04:47:43,949 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:47:43,951 DEBUG ~ insert into Series (name, serviceSeriesId, id) values (?, ?, ?)
+01 Apr 2012 04:47:43,952 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:47:43,954 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.password_id=?
+01 Apr 2012 04:47:43,955 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_16_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id14_0_, series1_.name as name14_0_, series1_.serviceSeriesId as serviceS3_14_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+01 Apr 2012 04:47:43,957 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:47:43,958 DEBUG ~ insert into WWIUSER_SERIES (SERIES_ID, WWIUSERS_ID, id) values (?, ?, ?)
+01 Apr 2012 04:47:45,454 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:47:45,456 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.password_id=?
+01 Apr 2012 04:47:45,459 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_16_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id14_0_, series1_.name as name14_0_, series1_.serviceSeriesId as serviceS3_14_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+01 Apr 2012 04:47:49,893 INFO  ~ Number of application's worked threads is 8
+01 Apr 2012 04:47:51,355 DEBUG ~ select wwiuser0_.id as id16_, wwiuser0_.email as email16_, wwiuser0_.password_id as password3_16_ from WWIUser wwiuser0_ where wwiuser0_.email=? limit ?
+01 Apr 2012 04:47:51,356 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:47:51,359 DEBUG ~ insert into WWIUser (email, password_id, id) values (?, ?, ?)
+01 Apr 2012 04:47:51,374 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:47:51,377 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_16_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id14_0_, series1_.name as name14_0_, series1_.serviceSeriesId as serviceS3_14_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+01 Apr 2012 04:47:53,983 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
+01 Apr 2012 04:47:56,295 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ order by (select count(users1_.SERIES_ID) from WWIUSER_SERIES users1_ where series0_.id=users1_.SERIES_ID) desc limit ?
+01 Apr 2012 04:48:01,474 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+01 Apr 2012 04:48:02,556 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:02,559 DEBUG ~ insert into Series (name, serviceSeriesId, id) values (?, ?, ?)
+01 Apr 2012 04:48:02,560 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:48:02,561 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_16_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id14_0_, series1_.name as name14_0_, series1_.serviceSeriesId as serviceS3_14_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+01 Apr 2012 04:48:02,562 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:02,564 DEBUG ~ insert into WWIUSER_SERIES (SERIES_ID, WWIUSERS_ID, id) values (?, ?, ?)
+01 Apr 2012 04:48:03,935 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:48:03,939 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_16_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id14_0_, series1_.name as name14_0_, series1_.serviceSeriesId as serviceS3_14_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
+01 Apr 2012 04:48:05,715 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+01 Apr 2012 04:48:05,720 DEBUG ~ select wwiuser0_.id as id16_, wwiuser0_.email as email16_, wwiuser0_.password_id as password3_16_ from WWIUser wwiuser0_ where wwiuser0_.id=? limit ?
+01 Apr 2012 04:48:05,729 DEBUG ~ select episode0_.id as id15_, episode0_.episodeNumber as episodeN2_15_, episode0_.seasonNumber as seasonNu3_15_, episode0_.series_id as series4_15_ from Episode episode0_ where episode0_.series_id=? and (? in (select wwiuser2_.id from WWIUSER_EPISODE users1_, WWIUser wwiuser2_ where episode0_.id=users1_.EPISODES_ID and users1_.WWIUSERS_ID=wwiuser2_.id))
+01 Apr 2012 04:48:07,918 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:48:07,922 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+01 Apr 2012 04:48:07,960 DEBUG ~ select episode0_.id as id15_, episode0_.episodeNumber as episodeN2_15_, episode0_.seasonNumber as seasonNu3_15_, episode0_.series_id as series4_15_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+01 Apr 2012 04:48:07,963 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:07,965 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
+01 Apr 2012 04:48:07,968 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:07,969 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
+01 Apr 2012 04:48:07,980 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:48:07,982 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+01 Apr 2012 04:48:07,984 DEBUG ~ select episode0_.id as id15_, episode0_.episodeNumber as episodeN2_15_, episode0_.seasonNumber as seasonNu3_15_, episode0_.series_id as series4_15_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+01 Apr 2012 04:48:07,985 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:07,987 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
+01 Apr 2012 04:48:07,990 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:07,992 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
+01 Apr 2012 04:48:08,004 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:48:08,006 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+01 Apr 2012 04:48:08,008 DEBUG ~ select episode0_.id as id15_, episode0_.episodeNumber as episodeN2_15_, episode0_.seasonNumber as seasonNu3_15_, episode0_.series_id as series4_15_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+01 Apr 2012 04:48:08,011 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,013 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
+01 Apr 2012 04:48:08,014 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,016 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
+01 Apr 2012 04:48:08,024 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:48:08,027 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+01 Apr 2012 04:48:08,028 DEBUG ~ select episode0_.id as id15_, episode0_.episodeNumber as episodeN2_15_, episode0_.seasonNumber as seasonNu3_15_, episode0_.series_id as series4_15_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+01 Apr 2012 04:48:08,029 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,030 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
+01 Apr 2012 04:48:08,032 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,034 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
+01 Apr 2012 04:48:08,044 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:48:08,047 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+01 Apr 2012 04:48:08,048 DEBUG ~ select episode0_.id as id15_, episode0_.episodeNumber as episodeN2_15_, episode0_.seasonNumber as seasonNu3_15_, episode0_.series_id as series4_15_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+01 Apr 2012 04:48:08,050 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,052 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
+01 Apr 2012 04:48:08,057 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,059 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
+01 Apr 2012 04:48:08,068 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:48:08,070 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+01 Apr 2012 04:48:08,072 DEBUG ~ select episode0_.id as id15_, episode0_.episodeNumber as episodeN2_15_, episode0_.seasonNumber as seasonNu3_15_, episode0_.series_id as series4_15_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+01 Apr 2012 04:48:08,072 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,074 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
+01 Apr 2012 04:48:08,076 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,077 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
+01 Apr 2012 04:48:08,087 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:48:08,089 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+01 Apr 2012 04:48:08,091 DEBUG ~ select episode0_.id as id15_, episode0_.episodeNumber as episodeN2_15_, episode0_.seasonNumber as seasonNu3_15_, episode0_.series_id as series4_15_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+01 Apr 2012 04:48:08,092 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,095 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
+01 Apr 2012 04:48:08,096 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,098 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
+01 Apr 2012 04:48:08,109 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:48:08,111 DEBUG ~ select series0_.id as id14_, series0_.name as name14_, series0_.serviceSeriesId as serviceS3_14_ from Series series0_ where series0_.serviceSeriesId=? limit ?
+01 Apr 2012 04:48:08,112 DEBUG ~ select episode0_.id as id15_, episode0_.episodeNumber as episodeN2_15_, episode0_.seasonNumber as seasonNu3_15_, episode0_.series_id as series4_15_ from Episode episode0_ where episode0_.episodeNumber=? and episode0_.seasonNumber=? and series_id=? limit ?
+01 Apr 2012 04:48:08,113 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,115 DEBUG ~ insert into Episode (episodeNumber, seasonNumber, series_id, id) values (?, ?, ?, ?)
+01 Apr 2012 04:48:08,116 DEBUG ~ select nextval ('hibernate_sequence')
+01 Apr 2012 04:48:08,118 DEBUG ~ insert into WWIUSER_EPISODE (EPISODES_ID, WWIUSERS_ID, id) values (?, ?, ?)
+01 Apr 2012 04:48:11,830 DEBUG ~ select wwiuser0_.id as id16_1_, wwiuser0_.email as email16_1_, wwiuser0_.password_id as password3_16_1_, wwiuserpas1_.id as id17_0_, wwiuserpas1_.passwordHash as password2_17_0_ from WWIUser wwiuser0_ left outer join WWIUserPassword wwiuserpas1_ on wwiuser0_.password_id=wwiuserpas1_.id where wwiuser0_.id=?
+01 Apr 2012 04:48:11,835 DEBUG ~ select series0_.WWIUSERS_ID as WWIUSERS3_16_1_, series0_.SERIES_ID as SERIES2_1_, series1_.id as id14_0_, series1_.name as name14_0_, series1_.serviceSeriesId as serviceS3_14_0_ from WWIUSER_SERIES series0_ inner join Series series1_ on series0_.SERIES_ID=series1_.id where series0_.WWIUSERS_ID=?
